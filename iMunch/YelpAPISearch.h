@@ -14,7 +14,7 @@
 
  See the Yelp Documentation http://www.yelp.com/developers/documentation for more info.
  */
-@interface YPAPISample : NSObject
+@interface YelpAPISearch : NSObject
 
 /**
  Query the Yelp API with a given term and location and displays the progress in the log
@@ -23,6 +23,7 @@
  @param location: The location in which the term should be searched for, e.g: San Francisco, CA
  */
 - (void)queryTopBusinessInfoForTerm:(NSString *)term location:(NSString *)location completionHandler:(void (^)(NSDictionary *jsonResponse, NSError *error))completionHandler;
+- (NSArray*) getAllBusiness;
 
 
 @end

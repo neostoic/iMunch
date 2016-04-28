@@ -2,7 +2,7 @@
 //  YPAPISample.m
 //  YelpAPI
 
-#import "YPAPISample.h"
+#import "YelpAPISearch.h"
 #import "NSURLRequest+OAuth.h"
 
 /**
@@ -11,15 +11,21 @@
 static NSString * const kAPIHost           = @"api.yelp.com";
 static NSString * const kSearchPath        = @"/v2/search/";
 static NSString * const kBusinessPath      = @"/v2/business/";
-static NSString * const kSearchLimit       = @"3";
+static NSString * const kSearchLimit       = @"20";
 
-@implementation YPAPISample
+@interface YelpAPISearch ()
+// private properties
+@property(strong, nonatomic) NSArray* allBusinesses;
+
+@end
+
+@implementation YelpAPISearch
 
 #pragma mark - Public
 
 - (void)queryTopBusinessInfoForTerm:(NSString *)term location:(NSString *)location completionHandler:(void (^)(NSDictionary *topBusinessJSON, NSError *error))completionHandler {
 
-  NSLog(@"Querying the Search API with term \'%@\' and location \'%@'", term, location);
+ // NSLog(@"Querying the Search API with term \'%@\' and location \'%@'", term, location);
 
   //Make a first request to get the search results with the passed term and location
   NSURLRequest *searchRequest = [self _searchRequestWithTerm:term location:location];
@@ -32,11 +38,12 @@ static NSString * const kSearchLimit       = @"3";
 
       NSDictionary *searchResponseJSON = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
       NSArray *businessArray = searchResponseJSON[@"businesses"];
-
+        
       if ([businessArray count] > 0) {
+          _allBusinesses = businessArray;
         NSDictionary *firstBusiness = [businessArray firstObject];
         NSString *firstBusinessID = firstBusiness[@"id"];
-        NSLog(@"%lu businesses found, querying business info for the top result: %@", (unsigned long)[businessArray count], firstBusinessID);
+       NSLog(@"%lu businesses found, querying business info for the top result: %@", (unsigned long)[businessArray count], firstBusinessID);
 
         [self queryBusinessInfoForBusinessId:firstBusinessID completionHandler:completionHandler];
       } else {
@@ -46,6 +53,10 @@ static NSString * const kSearchLimit       = @"3";
       completionHandler(nil, error); // An error happened or the HTTP response is not a 200 OK
     }
   }] resume];
+}
+
+- (NSArray*) getAllBusiness {
+    return _allBusinesses;
 }
 
 - (void)queryBusinessInfoForBusinessId:(NSString *)businessID completionHandler:(void (^)(NSDictionary *topBusinessJSON, NSError *error))completionHandler {

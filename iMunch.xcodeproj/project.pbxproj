@@ -7,14 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		43A3147B1CD1FF38000BB287 /* YPAPISample.m in Sources */ = {isa = PBXBuildFile; fileRef = 43A314791CD1FF38000BB287 /* YPAPISample.m */; };
+		43A3147B1CD1FF38000BB287 /* YelpAPISearch.m in Sources */ = {isa = PBXBuildFile; fileRef = 43A314791CD1FF38000BB287 /* YelpAPISearch.m */; };
 		43A3147C1CD2049F000BB287 /* NSURLRequest+OAuth.m in Sources */ = {isa = PBXBuildFile; fileRef = 43A314761CD1FF38000BB287 /* NSURLRequest+OAuth.m */; };
+		43A3147F1CD28183000BB287 /* HomeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43A3147E1CD28183000BB287 /* HomeTableViewController.m */; };
+		43A314851CD28230000BB287 /* YelpAPIModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 43A314841CD28230000BB287 /* YelpAPIModel.m */; };
+		43A314881CD28F20000BB287 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43A314861CD28F20000BB287 /* LaunchScreen.storyboard */; };
 		568FAAE81CCEB0EF005B2B8D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 568FAAE71CCEB0EF005B2B8D /* main.m */; };
 		568FAAEB1CCEB0EF005B2B8D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 568FAAEA1CCEB0EF005B2B8D /* AppDelegate.m */; };
-		568FAAEE1CCEB0EF005B2B8D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 568FAAED1CCEB0EF005B2B8D /* ViewController.m */; };
 		568FAAF11CCEB0EF005B2B8D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 568FAAEF1CCEB0EF005B2B8D /* Main.storyboard */; };
 		568FAAF31CCEB0EF005B2B8D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 568FAAF21CCEB0EF005B2B8D /* Assets.xcassets */; };
-		568FAAF61CCEB0EF005B2B8D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 568FAAF41CCEB0EF005B2B8D /* LaunchScreen.storyboard */; };
 		568FAB011CCEB0EF005B2B8D /* iMunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 568FAB001CCEB0EF005B2B8D /* iMunchTests.m */; };
 		568FAB0C1CCEB0EF005B2B8D /* iMunchUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 568FAB0B1CCEB0EF005B2B8D /* iMunchUITests.m */; };
 		BF9E5694C4FA4896173A0CE2 /* libPods-iMunch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B8A96115E67AFB5D32F962A /* libPods-iMunch.a */; };
@@ -42,17 +43,19 @@
 		43A314751CD1FF38000BB287 /* NSURLRequest+OAuth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURLRequest+OAuth.h"; sourceTree = "<group>"; };
 		43A314761CD1FF38000BB287 /* NSURLRequest+OAuth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURLRequest+OAuth.m"; sourceTree = "<group>"; };
 		43A314771CD1FF38000BB287 /* YelpAPISample-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "YelpAPISample-Prefix.pch"; sourceTree = "<group>"; };
-		43A314781CD1FF38000BB287 /* YPAPISample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YPAPISample.h; sourceTree = "<group>"; };
-		43A314791CD1FF38000BB287 /* YPAPISample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YPAPISample.m; sourceTree = "<group>"; };
+		43A314781CD1FF38000BB287 /* YelpAPISearch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YelpAPISearch.h; sourceTree = "<group>"; };
+		43A314791CD1FF38000BB287 /* YelpAPISearch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YelpAPISearch.m; sourceTree = "<group>"; };
+		43A3147D1CD28183000BB287 /* HomeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeTableViewController.h; sourceTree = "<group>"; };
+		43A3147E1CD28183000BB287 /* HomeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeTableViewController.m; sourceTree = "<group>"; };
+		43A314831CD28230000BB287 /* YelpAPIModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YelpAPIModel.h; sourceTree = "<group>"; };
+		43A314841CD28230000BB287 /* YelpAPIModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YelpAPIModel.m; sourceTree = "<group>"; };
+		43A314871CD28F20000BB287 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		568FAAE31CCEB0EF005B2B8D /* iMunch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iMunch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		568FAAE71CCEB0EF005B2B8D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		568FAAE91CCEB0EF005B2B8D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		568FAAEA1CCEB0EF005B2B8D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		568FAAEC1CCEB0EF005B2B8D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		568FAAED1CCEB0EF005B2B8D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		568FAAF01CCEB0EF005B2B8D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		568FAAF21CCEB0EF005B2B8D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		568FAAF51CCEB0EF005B2B8D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		568FAAF71CCEB0EF005B2B8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		568FAAFC1CCEB0EF005B2B8D /* iMunchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iMunchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		568FAB001CCEB0EF005B2B8D /* iMunchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iMunchTests.m; sourceTree = "<group>"; };
@@ -107,6 +110,33 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		43A314801CD28193000BB287 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				43A314831CD28230000BB287 /* YelpAPIModel.h */,
+				43A314841CD28230000BB287 /* YelpAPIModel.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		43A314811CD28199000BB287 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				568FAAEF1CCEB0EF005B2B8D /* Main.storyboard */,
+				568FAAF21CCEB0EF005B2B8D /* Assets.xcassets */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		43A314821CD2819D000BB287 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				43A3147D1CD28183000BB287 /* HomeTableViewController.h */,
+				43A3147E1CD28183000BB287 /* HomeTableViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
 		568FAADA1CCEB0EE005B2B8D = {
 			isa = PBXGroup;
 			children = (
@@ -132,19 +162,14 @@
 		568FAAE51CCEB0EF005B2B8D /* iMunch */ = {
 			isa = PBXGroup;
 			children = (
+				43A314821CD2819D000BB287 /* Controller */,
+				43A314811CD28199000BB287 /* View */,
+				43A314801CD28193000BB287 /* Model */,
 				43A314751CD1FF38000BB287 /* NSURLRequest+OAuth.h */,
 				43A314761CD1FF38000BB287 /* NSURLRequest+OAuth.m */,
-				43A314781CD1FF38000BB287 /* YPAPISample.h */,
-				43A314791CD1FF38000BB287 /* YPAPISample.m */,
-				568FAAE91CCEB0EF005B2B8D /* AppDelegate.h */,
-				568FAAEA1CCEB0EF005B2B8D /* AppDelegate.m */,
-				568FAAEC1CCEB0EF005B2B8D /* ViewController.h */,
-				568FAAED1CCEB0EF005B2B8D /* ViewController.m */,
+				43A314781CD1FF38000BB287 /* YelpAPISearch.h */,
+				43A314791CD1FF38000BB287 /* YelpAPISearch.m */,
 				568FAAE71CCEB0EF005B2B8D /* main.m */,
-				568FAAEF1CCEB0EF005B2B8D /* Main.storyboard */,
-				568FAAF21CCEB0EF005B2B8D /* Assets.xcassets */,
-				568FAAF41CCEB0EF005B2B8D /* LaunchScreen.storyboard */,
-				568FAAF71CCEB0EF005B2B8D /* Info.plist */,
 				568FAAE61CCEB0EF005B2B8D /* Supporting Files */,
 			);
 			path = iMunch;
@@ -153,7 +178,11 @@
 		568FAAE61CCEB0EF005B2B8D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				568FAAF71CCEB0EF005B2B8D /* Info.plist */,
+				568FAAE91CCEB0EF005B2B8D /* AppDelegate.h */,
+				568FAAEA1CCEB0EF005B2B8D /* AppDelegate.m */,
 				43A314771CD1FF38000BB287 /* YelpAPISample-Prefix.pch */,
+				43A314861CD28F20000BB287 /* LaunchScreen.storyboard */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -282,7 +311,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				568FAAF61CCEB0EF005B2B8D /* LaunchScreen.storyboard in Resources */,
+				43A314881CD28F20000BB287 /* LaunchScreen.storyboard in Resources */,
 				568FAAF31CCEB0EF005B2B8D /* Assets.xcassets in Resources */,
 				568FAAF11CCEB0EF005B2B8D /* Main.storyboard in Resources */,
 			);
@@ -357,8 +386,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				43A3147B1CD1FF38000BB287 /* YPAPISample.m in Sources */,
-				568FAAEE1CCEB0EF005B2B8D /* ViewController.m in Sources */,
+				43A314851CD28230000BB287 /* YelpAPIModel.m in Sources */,
+				43A3147B1CD1FF38000BB287 /* YelpAPISearch.m in Sources */,
+				43A3147F1CD28183000BB287 /* HomeTableViewController.m in Sources */,
 				568FAAEB1CCEB0EF005B2B8D /* AppDelegate.m in Sources */,
 				43A3147C1CD2049F000BB287 /* NSURLRequest+OAuth.m in Sources */,
 				568FAAE81CCEB0EF005B2B8D /* main.m in Sources */,
@@ -397,20 +427,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		43A314861CD28F20000BB287 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				43A314871CD28F20000BB287 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
 		568FAAEF1CCEB0EF005B2B8D /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				568FAAF01CCEB0EF005B2B8D /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		568FAAF41CCEB0EF005B2B8D /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				568FAAF51CCEB0EF005B2B8D /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
