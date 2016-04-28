@@ -15,6 +15,9 @@
 @end
 
 @implementation RestaurantViewController
+- (IBAction)goBack:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -24,7 +27,8 @@
 //    }
     
   //  NSLog(@"%@", [_restaurantCurrent objectForKey:kNameKey]);
-    
+    UIBarButtonItem *backButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Previous" style:UIBarButtonItemStylePlain target:nil action:nil];
+    self.navigationItem.backBarButtonItem = backButtonItem;
     
     
    _restaurantTitle.text = [_restaurantCurrent objectForKey:kNameKey];
@@ -34,6 +38,7 @@
     _restaurantReview.text = [_restaurantCurrent objectForKey:kReviewKey];
     
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

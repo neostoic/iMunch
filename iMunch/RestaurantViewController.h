@@ -16,6 +16,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *restaurantImage1;
 @property (weak, nonatomic) IBOutlet UIImageView *restaurantImage2;
 @property (weak, nonatomic) IBOutlet UIImageView *restaurantImage3;
+@property (weak, nonatomic) IBOutlet UINavigationBar *navigationBar;
 @property (strong, nonatomic) NSDictionary *restaurantCurrent;
 
 @end
