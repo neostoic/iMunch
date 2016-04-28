@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iMunch/#import &lt;Foundation/Foundation.h&gt;  @interface NSURLRequest (OAuth)  /**  @param host The domain host  @param path The path on the domain host  @return Builds a NSURLRequest with all the OAuth headers field set with the host and path given to it.  */ + (NSURLRequest *)requestWithHost:(NSString *)host path:(NSString *)path;  /**  @param host The domain host  @param path The path on the domain host  @param params The query parameters  @return Builds a NSURLRequest with all the OAuth headers field set with the host, path, and query parameters given to it.  */ + (NSURLRequest *)requestWithHost:(NSString *)host path:(NSString *)path params:(NSDictionary *)params;  @end NSURLRequest+OAuth.m"
+            timestampString = "483512884.90615"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "6"
+            endingLineNumber = "6">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iMunch/NSURLRequest+OAuth.m"
+            timestampString = "483521501.682567"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

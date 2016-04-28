@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		43A3147B1CD1FF38000BB287 /* YPAPISample.m in Sources */ = {isa = PBXBuildFile; fileRef = 43A314791CD1FF38000BB287 /* YPAPISample.m */; };
+		43A3147C1CD2049F000BB287 /* NSURLRequest+OAuth.m in Sources */ = {isa = PBXBuildFile; fileRef = 43A314761CD1FF38000BB287 /* NSURLRequest+OAuth.m */; };
 		568FAAE81CCEB0EF005B2B8D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 568FAAE71CCEB0EF005B2B8D /* main.m */; };
 		568FAAEB1CCEB0EF005B2B8D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 568FAAEA1CCEB0EF005B2B8D /* AppDelegate.m */; };
 		568FAAEE1CCEB0EF005B2B8D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 568FAAED1CCEB0EF005B2B8D /* ViewController.m */; };
@@ -15,6 +17,7 @@
 		568FAAF61CCEB0EF005B2B8D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 568FAAF41CCEB0EF005B2B8D /* LaunchScreen.storyboard */; };
 		568FAB011CCEB0EF005B2B8D /* iMunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 568FAB001CCEB0EF005B2B8D /* iMunchTests.m */; };
 		568FAB0C1CCEB0EF005B2B8D /* iMunchUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 568FAB0B1CCEB0EF005B2B8D /* iMunchUITests.m */; };
+		BF9E5694C4FA4896173A0CE2 /* libPods-iMunch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B8A96115E67AFB5D32F962A /* libPods-iMunch.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +38,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2B8A96115E67AFB5D32F962A /* libPods-iMunch.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iMunch.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		43A314751CD1FF38000BB287 /* NSURLRequest+OAuth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURLRequest+OAuth.h"; sourceTree = "<group>"; };
+		43A314761CD1FF38000BB287 /* NSURLRequest+OAuth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURLRequest+OAuth.m"; sourceTree = "<group>"; };
+		43A314771CD1FF38000BB287 /* YelpAPISample-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "YelpAPISample-Prefix.pch"; sourceTree = "<group>"; };
+		43A314781CD1FF38000BB287 /* YPAPISample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YPAPISample.h; sourceTree = "<group>"; };
+		43A314791CD1FF38000BB287 /* YPAPISample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YPAPISample.m; sourceTree = "<group>"; };
 		568FAAE31CCEB0EF005B2B8D /* iMunch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iMunch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		568FAAE71CCEB0EF005B2B8D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		568FAAE91CCEB0EF005B2B8D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -51,6 +60,8 @@
 		568FAB071CCEB0EF005B2B8D /* iMunchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iMunchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		568FAB0B1CCEB0EF005B2B8D /* iMunchUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iMunchUITests.m; sourceTree = "<group>"; };
 		568FAB0D1CCEB0EF005B2B8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6D2A0C483FED805F00000C1A /* Pods-iMunch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iMunch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iMunch/Pods-iMunch.debug.xcconfig"; sourceTree = "<group>"; };
+		7C97D09A280EE35D79C3C67B /* Pods-iMunch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iMunch.release.xcconfig"; path = "Pods/Target Support Files/Pods-iMunch/Pods-iMunch.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF9E5694C4FA4896173A0CE2 /* libPods-iMunch.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +90,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0D726CD128DD81F9169D255B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6D2A0C483FED805F00000C1A /* Pods-iMunch.debug.xcconfig */,
+				7C97D09A280EE35D79C3C67B /* Pods-iMunch.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		1B4ED02B832760A9DA90C7D3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2B8A96115E67AFB5D32F962A /* libPods-iMunch.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		568FAADA1CCEB0EE005B2B8D = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +114,8 @@
 				568FAAFF1CCEB0EF005B2B8D /* iMunchTests */,
 				568FAB0A1CCEB0EF005B2B8D /* iMunchUITests */,
 				568FAAE41CCEB0EF005B2B8D /* Products */,
+				0D726CD128DD81F9169D255B /* Pods */,
+				1B4ED02B832760A9DA90C7D3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,10 +132,15 @@
 		568FAAE51CCEB0EF005B2B8D /* iMunch */ = {
 			isa = PBXGroup;
 			children = (
+				43A314751CD1FF38000BB287 /* NSURLRequest+OAuth.h */,
+				43A314761CD1FF38000BB287 /* NSURLRequest+OAuth.m */,
+				43A314781CD1FF38000BB287 /* YPAPISample.h */,
+				43A314791CD1FF38000BB287 /* YPAPISample.m */,
 				568FAAE91CCEB0EF005B2B8D /* AppDelegate.h */,
 				568FAAEA1CCEB0EF005B2B8D /* AppDelegate.m */,
 				568FAAEC1CCEB0EF005B2B8D /* ViewController.h */,
 				568FAAED1CCEB0EF005B2B8D /* ViewController.m */,
+				568FAAE71CCEB0EF005B2B8D /* main.m */,
 				568FAAEF1CCEB0EF005B2B8D /* Main.storyboard */,
 				568FAAF21CCEB0EF005B2B8D /* Assets.xcassets */,
 				568FAAF41CCEB0EF005B2B8D /* LaunchScreen.storyboard */,
@@ -117,7 +153,7 @@
 		568FAAE61CCEB0EF005B2B8D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				568FAAE71CCEB0EF005B2B8D /* main.m */,
+				43A314771CD1FF38000BB287 /* YelpAPISample-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -147,9 +183,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 568FAB101CCEB0EF005B2B8D /* Build configuration list for PBXNativeTarget "iMunch" */;
 			buildPhases = (
+				5C604798A0476A9AE8E5A815 /* Check Pods Manifest.lock */,
 				568FAADF1CCEB0EF005B2B8D /* Sources */,
 				568FAAE01CCEB0EF005B2B8D /* Frameworks */,
 				568FAAE11CCEB0EF005B2B8D /* Resources */,
+				33BD6C0A111B9F1BE527F0D4 /* Embed Pods Frameworks */,
+				CFA140B16C76BD27D9844272 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -265,13 +304,63 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		33BD6C0A111B9F1BE527F0D4 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iMunch/Pods-iMunch-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5C604798A0476A9AE8E5A815 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		CFA140B16C76BD27D9844272 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iMunch/Pods-iMunch-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		568FAADF1CCEB0EF005B2B8D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43A3147B1CD1FF38000BB287 /* YPAPISample.m in Sources */,
 				568FAAEE1CCEB0EF005B2B8D /* ViewController.m in Sources */,
 				568FAAEB1CCEB0EF005B2B8D /* AppDelegate.m in Sources */,
+				43A3147C1CD2049F000BB287 /* NSURLRequest+OAuth.m in Sources */,
 				568FAAE81CCEB0EF005B2B8D /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -409,6 +498,7 @@
 		};
 		568FAB111CCEB0EF005B2B8D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6D2A0C483FED805F00000C1A /* Pods-iMunch.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = iMunch/Info.plist;
@@ -420,6 +510,7 @@
 		};
 		568FAB121CCEB0EF005B2B8D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7C97D09A280EE35D79C3C67B /* Pods-iMunch.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = iMunch/Info.plist;
@@ -496,6 +587,7 @@
 				568FAB121CCEB0EF005B2B8D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		568FAB131CCEB0EF005B2B8D /* Build configuration list for PBXNativeTarget "iMunchTests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +596,7 @@
 				568FAB151CCEB0EF005B2B8D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		568FAB161CCEB0EF005B2B8D /* Build configuration list for PBXNativeTarget "iMunchUITests" */ = {
 			isa = XCConfigurationList;
@@ -512,6 +605,7 @@
 				568FAB181CCEB0EF005B2B8D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -1,0 +1,593 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1281783FDA3FE60294A8527D976201CF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		1B3C0F6DD3C9961760D25CEF97E696C6 /* TDOAuth.m in Sources */ = {isa = PBXBuildFile; fileRef = 78292A4CD8377B368E0FE6A6143D9437 /* TDOAuth.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		1CA5E5B427016F8F21C95D7088C3FA48 /* OMGHTTPURLRQ-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1990419A7FC3D8A50F9D1A7C0CC5C7E5 /* OMGHTTPURLRQ-dummy.m */; };
+		403529368B93B9CA73FCD5155D287C96 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		45FD2EEBD73EADFAEAE6C25BDA5B1D06 /* Pods-iMunch-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 26163A104E47D8C14BC208EC5F165D7F /* Pods-iMunch-dummy.m */; };
+		48FD54B161094645748D2BACA8DE4A5B /* OMGUserAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E88838D0DDF2FE93721469CBE9F62C /* OMGUserAgent.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		6BA059678A8732487F69EB681733149F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		81261C0D363094097094C5C50BC65F47 /* TDOAuth-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CB5B09DF1A1955EBCE6528CD960265A /* TDOAuth-dummy.m */; };
+		82C8CF18B625AF55E37C6B6D98123A6B /* TDOAuth.h in Headers */ = {isa = PBXBuildFile; fileRef = 66DC7D555D33B544339B05188B7730BD /* TDOAuth.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F29C6CB87595941B74EE3F238D78B367 /* OMGUserAgent.h in Headers */ = {isa = PBXBuildFile; fileRef = 685A2BFAABB1660FCFF52F5DA22AA4ED /* OMGUserAgent.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2DEDA6CD0F576EF7B0B6C01EE473D31C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D2259A656351A5CE51FAC5A212C79ACC;
+			remoteInfo = TDOAuth;
+		};
+		85CD8680BF9041C93830E07AAE52FC77 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FCD660E6CD2216BA204430C04B61EFFF;
+			remoteInfo = OMGHTTPURLRQ;
+		};
+		BD2CF859D1FB44A2F6BA75625DB18347 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FCD660E6CD2216BA204430C04B61EFFF;
+			remoteInfo = OMGHTTPURLRQ;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1990419A7FC3D8A50F9D1A7C0CC5C7E5 /* OMGHTTPURLRQ-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "OMGHTTPURLRQ-dummy.m"; sourceTree = "<group>"; };
+		259272AEBD5102B253844328B35D8604 /* libOMGHTTPURLRQ.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libOMGHTTPURLRQ.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		26163A104E47D8C14BC208EC5F165D7F /* Pods-iMunch-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-iMunch-dummy.m"; sourceTree = "<group>"; };
+		3CB5B09DF1A1955EBCE6528CD960265A /* TDOAuth-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TDOAuth-dummy.m"; sourceTree = "<group>"; };
+		3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		5FEA2DB655A4C61036102C79FFBC5797 /* TDOAuth.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TDOAuth.xcconfig; sourceTree = "<group>"; };
+		66DC7D555D33B544339B05188B7730BD /* TDOAuth.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TDOAuth.h; sourceTree = "<group>"; };
+		67E88838D0DDF2FE93721469CBE9F62C /* OMGUserAgent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OMGUserAgent.m; path = Sources/OMGUserAgent.m; sourceTree = "<group>"; };
+		685A2BFAABB1660FCFF52F5DA22AA4ED /* OMGUserAgent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OMGUserAgent.h; path = Sources/OMGUserAgent.h; sourceTree = "<group>"; };
+		764F1EDB99F04D28608B329E2610A8F5 /* libTDOAuth.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libTDOAuth.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		7714E17700926E229D0B3ACB0B23B46E /* OMGHTTPURLRQ.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = OMGHTTPURLRQ.xcconfig; sourceTree = "<group>"; };
+		78292A4CD8377B368E0FE6A6143D9437 /* TDOAuth.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TDOAuth.m; sourceTree = "<group>"; };
+		8C868A3EBF62901E6578CCD8670A5683 /* Pods-iMunch-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-iMunch-frameworks.sh"; sourceTree = "<group>"; };
+		92AB8C6F17575A4976239FB01520620C /* libPods-iMunch.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iMunch.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		99F8F59D348701CCB524B50BBEFF8AEB /* Pods-iMunch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-iMunch.debug.xcconfig"; sourceTree = "<group>"; };
+		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		CF42726774C023AA4CEBBF6186AA4B6A /* Pods-iMunch-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-iMunch-resources.sh"; sourceTree = "<group>"; };
+		E13305BDB9238F28299C03E4EA337705 /* Pods-iMunch-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-iMunch-acknowledgements.markdown"; sourceTree = "<group>"; };
+		E19A30784EA08E4F1417D5CB1DC6DD6B /* OMGHTTPURLRQ-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "OMGHTTPURLRQ-prefix.pch"; sourceTree = "<group>"; };
+		E2680834A43FD592A493B52FB54E48E6 /* Pods-iMunch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-iMunch.release.xcconfig"; sourceTree = "<group>"; };
+		E7C9A5532B8F2F19F585AB5BB0A5E189 /* TDOAuth-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TDOAuth-prefix.pch"; sourceTree = "<group>"; };
+		FBA21E420F195B3E94A1FA8B6341E934 /* Pods-iMunch-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-iMunch-acknowledgements.plist"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		016B28E62149243BB38E94D3313DE754 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1281783FDA3FE60294A8527D976201CF /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		06DF07A7F70611A3E1FD76D182EE36DE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6BA059678A8732487F69EB681733149F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		86627EF7CD9962738ED46E8B892DAD23 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				403529368B93B9CA73FCD5155D287C96 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1B3749FC85DDD797B36E73DA67A58D6A /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				E666B3031A2DF59F308DA9D73DF57426 /* Pods-iMunch */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		2E3A906538D7EE3E7FED833EE546299E /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				7714E17700926E229D0B3ACB0B23B46E /* OMGHTTPURLRQ.xcconfig */,
+				1990419A7FC3D8A50F9D1A7C0CC5C7E5 /* OMGHTTPURLRQ-dummy.m */,
+				E19A30784EA08E4F1417D5CB1DC6DD6B /* OMGHTTPURLRQ-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/OMGHTTPURLRQ";
+			sourceTree = "<group>";
+		};
+		6F9F6ED24E7EBF6EBB08346D4101DDB4 /* TDOAuth */ = {
+			isa = PBXGroup;
+			children = (
+				66DC7D555D33B544339B05188B7730BD /* TDOAuth.h */,
+				78292A4CD8377B368E0FE6A6143D9437 /* TDOAuth.m */,
+				7018DDD187188F414DC68FFF52349F69 /* Support Files */,
+			);
+			path = TDOAuth;
+			sourceTree = "<group>";
+		};
+		7018DDD187188F414DC68FFF52349F69 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				5FEA2DB655A4C61036102C79FFBC5797 /* TDOAuth.xcconfig */,
+				3CB5B09DF1A1955EBCE6528CD960265A /* TDOAuth-dummy.m */,
+				E7C9A5532B8F2F19F585AB5BB0A5E189 /* TDOAuth-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/TDOAuth";
+			sourceTree = "<group>";
+		};
+		79DC324FC62BD5296B4EB21B2231821B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E2CDDB17F5CBAF96010565A7EA715BD9 /* OMGHTTPURLRQ */,
+				6F9F6ED24E7EBF6EBB08346D4101DDB4 /* TDOAuth */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				79DC324FC62BD5296B4EB21B2231821B /* Pods */,
+				FAC26EBBB5897B866E48443737C9F528 /* Products */,
+				1B3749FC85DDD797B36E73DA67A58D6A /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BF6342C8B29F4CEEA088EFF7AB4DE362 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BF6342C8B29F4CEEA088EFF7AB4DE362 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		E2CDDB17F5CBAF96010565A7EA715BD9 /* OMGHTTPURLRQ */ = {
+			isa = PBXGroup;
+			children = (
+				2E3A906538D7EE3E7FED833EE546299E /* Support Files */,
+				E4E4AB7D4EF105C01FC45035C64E5496 /* UserAgent */,
+			);
+			path = OMGHTTPURLRQ;
+			sourceTree = "<group>";
+		};
+		E4E4AB7D4EF105C01FC45035C64E5496 /* UserAgent */ = {
+			isa = PBXGroup;
+			children = (
+				685A2BFAABB1660FCFF52F5DA22AA4ED /* OMGUserAgent.h */,
+				67E88838D0DDF2FE93721469CBE9F62C /* OMGUserAgent.m */,
+			);
+			name = UserAgent;
+			sourceTree = "<group>";
+		};
+		E666B3031A2DF59F308DA9D73DF57426 /* Pods-iMunch */ = {
+			isa = PBXGroup;
+			children = (
+				E13305BDB9238F28299C03E4EA337705 /* Pods-iMunch-acknowledgements.markdown */,
+				FBA21E420F195B3E94A1FA8B6341E934 /* Pods-iMunch-acknowledgements.plist */,
+				26163A104E47D8C14BC208EC5F165D7F /* Pods-iMunch-dummy.m */,
+				8C868A3EBF62901E6578CCD8670A5683 /* Pods-iMunch-frameworks.sh */,
+				CF42726774C023AA4CEBBF6186AA4B6A /* Pods-iMunch-resources.sh */,
+				99F8F59D348701CCB524B50BBEFF8AEB /* Pods-iMunch.debug.xcconfig */,
+				E2680834A43FD592A493B52FB54E48E6 /* Pods-iMunch.release.xcconfig */,
+			);
+			name = "Pods-iMunch";
+			path = "Target Support Files/Pods-iMunch";
+			sourceTree = "<group>";
+		};
+		FAC26EBBB5897B866E48443737C9F528 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				259272AEBD5102B253844328B35D8604 /* libOMGHTTPURLRQ.a */,
+				92AB8C6F17575A4976239FB01520620C /* libPods-iMunch.a */,
+				764F1EDB99F04D28608B329E2610A8F5 /* libTDOAuth.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		C46B1B2248038D58B7A9923C26B11B29 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F29C6CB87595941B74EE3F238D78B367 /* OMGUserAgent.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC05166108F661A5D3B8AB24E41D3D22 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				82C8CF18B625AF55E37C6B6D98123A6B /* TDOAuth.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		BD0BB0585AB47F23550718D3BE9FBC78 /* Pods-iMunch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 22D087738BD6756B054B2883728EA30D /* Build configuration list for PBXNativeTarget "Pods-iMunch" */;
+			buildPhases = (
+				83D575B247723E94CF93E7BA8157432B /* Sources */,
+				86627EF7CD9962738ED46E8B892DAD23 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				72EAC63EEBF88A431A3FEDC8E893E735 /* PBXTargetDependency */,
+				1E6D8BCACEED60C2931CDA80663EC107 /* PBXTargetDependency */,
+			);
+			name = "Pods-iMunch";
+			productName = "Pods-iMunch";
+			productReference = 92AB8C6F17575A4976239FB01520620C /* libPods-iMunch.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		D2259A656351A5CE51FAC5A212C79ACC /* TDOAuth */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 01FE37F7F5ABD4B44E259C7BDF86DCBC /* Build configuration list for PBXNativeTarget "TDOAuth" */;
+			buildPhases = (
+				E8FEE05E0C6084D341E9AD326A7CBE07 /* Sources */,
+				016B28E62149243BB38E94D3313DE754 /* Frameworks */,
+				CC05166108F661A5D3B8AB24E41D3D22 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8604C28208098415280B3B892872EADA /* PBXTargetDependency */,
+			);
+			name = TDOAuth;
+			productName = TDOAuth;
+			productReference = 764F1EDB99F04D28608B329E2610A8F5 /* libTDOAuth.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		FCD660E6CD2216BA204430C04B61EFFF /* OMGHTTPURLRQ */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BCDAA84180B46191D5FDD1F3233A04FE /* Build configuration list for PBXNativeTarget "OMGHTTPURLRQ" */;
+			buildPhases = (
+				5AE69805046AB1822BAFEC93CBB54CA1 /* Sources */,
+				06DF07A7F70611A3E1FD76D182EE36DE /* Frameworks */,
+				C46B1B2248038D58B7A9923C26B11B29 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OMGHTTPURLRQ;
+			productName = OMGHTTPURLRQ;
+			productReference = 259272AEBD5102B253844328B35D8604 /* libOMGHTTPURLRQ.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = FAC26EBBB5897B866E48443737C9F528 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FCD660E6CD2216BA204430C04B61EFFF /* OMGHTTPURLRQ */,
+				BD0BB0585AB47F23550718D3BE9FBC78 /* Pods-iMunch */,
+				D2259A656351A5CE51FAC5A212C79ACC /* TDOAuth */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5AE69805046AB1822BAFEC93CBB54CA1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1CA5E5B427016F8F21C95D7088C3FA48 /* OMGHTTPURLRQ-dummy.m in Sources */,
+				48FD54B161094645748D2BACA8DE4A5B /* OMGUserAgent.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		83D575B247723E94CF93E7BA8157432B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				45FD2EEBD73EADFAEAE6C25BDA5B1D06 /* Pods-iMunch-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E8FEE05E0C6084D341E9AD326A7CBE07 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				81261C0D363094097094C5C50BC65F47 /* TDOAuth-dummy.m in Sources */,
+				1B3C0F6DD3C9961760D25CEF97E696C6 /* TDOAuth.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1E6D8BCACEED60C2931CDA80663EC107 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = TDOAuth;
+			target = D2259A656351A5CE51FAC5A212C79ACC /* TDOAuth */;
+			targetProxy = 2DEDA6CD0F576EF7B0B6C01EE473D31C /* PBXContainerItemProxy */;
+		};
+		72EAC63EEBF88A431A3FEDC8E893E735 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = OMGHTTPURLRQ;
+			target = FCD660E6CD2216BA204430C04B61EFFF /* OMGHTTPURLRQ */;
+			targetProxy = 85CD8680BF9041C93830E07AAE52FC77 /* PBXContainerItemProxy */;
+		};
+		8604C28208098415280B3B892872EADA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = OMGHTTPURLRQ;
+			target = FCD660E6CD2216BA204430C04B61EFFF /* OMGHTTPURLRQ */;
+			targetProxy = BD2CF859D1FB44A2F6BA75625DB18347 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		4E3A2B6FF9CAD13ADB399CA336AEB734 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7714E17700926E229D0B3ACB0B23B46E /* OMGHTTPURLRQ.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/OMGHTTPURLRQ/OMGHTTPURLRQ-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		6BB53E7216CD144643154833F8C63349 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5FEA2DB655A4C61036102C79FFBC5797 /* TDOAuth.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/TDOAuth/TDOAuth-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		8D1534490D941DCA47C62AC4314182AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		A76B565FDF1C4D06ADAC7288891A209C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E2680834A43FD592A493B52FB54E48E6 /* Pods-iMunch.release.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		C5A18280E9321A9268D1C80B7DA43967 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D60339078D43459211714D03749158FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 99F8F59D348701CCB524B50BBEFF8AEB /* Pods-iMunch.debug.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		E94C6335A0976A89477EC4269955A317 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5FEA2DB655A4C61036102C79FFBC5797 /* TDOAuth.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/TDOAuth/TDOAuth-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		F62B05746BAB50E1343D0A8F424C9874 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7714E17700926E229D0B3ACB0B23B46E /* OMGHTTPURLRQ.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/OMGHTTPURLRQ/OMGHTTPURLRQ-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		01FE37F7F5ABD4B44E259C7BDF86DCBC /* Build configuration list for PBXNativeTarget "TDOAuth" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E94C6335A0976A89477EC4269955A317 /* Debug */,
+				6BB53E7216CD144643154833F8C63349 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		22D087738BD6756B054B2883728EA30D /* Build configuration list for PBXNativeTarget "Pods-iMunch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D60339078D43459211714D03749158FD /* Debug */,
+				A76B565FDF1C4D06ADAC7288891A209C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8D1534490D941DCA47C62AC4314182AF /* Debug */,
+				C5A18280E9321A9268D1C80B7DA43967 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BCDAA84180B46191D5FDD1F3233A04FE /* Build configuration list for PBXNativeTarget "OMGHTTPURLRQ" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4E3A2B6FF9CAD13ADB399CA336AEB734 /* Debug */,
+				F62B05746BAB50E1343D0A8F424C9874 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
