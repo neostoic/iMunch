@@ -11,7 +11,7 @@
 // constants
 static NSString * const kNameKey = @"name";
 static NSString * const kReviewKey = @"snippet_text";
-static NSString * const kLocationKey = @"location";
+static NSString * const kLocationKey = @"display_address";
 static NSString * const kRatingKey = @"rating";
 
 @interface YelpAPIModel : NSObject

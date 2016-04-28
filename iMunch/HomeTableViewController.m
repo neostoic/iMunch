@@ -8,12 +8,13 @@
 
 #import "HomeTableViewController.h"
 #import "YelpAPIModel.h"
+#import "RestaurantViewController.h"
 
 @interface HomeTableViewController ()
 // private properties
 
 @property(strong, nonatomic) YelpAPIModel *model;
-
+@property(strong, nonatomic) NSDictionary *currentRestaurant;
 @end
 
 @implementation HomeTableViewController
@@ -59,7 +60,12 @@
     return cell;
 }
 
-
+- (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    // get current cell
+    _currentRestaurant = [self.model restaurantAtIndex:indexPath.row];
+    [self performSegueWithIdentifier:@"restaurantSegue" sender:self];
+    
+}
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -94,14 +100,21 @@
 }
 */
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    if ([segue.identifier  isEqual: @"restaurantSegue"]) {
+        RestaurantViewController *vcDestination = segue.destinationViewController;
+        vcDestination.restaurantCurrent = [self currentRestaurant];
+    }
+    
+    
+    
 }
-*/
+
 
 @end

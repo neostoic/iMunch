@@ -12,6 +12,7 @@
 		43A3147F1CD28183000BB287 /* HomeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43A3147E1CD28183000BB287 /* HomeTableViewController.m */; };
 		43A314851CD28230000BB287 /* YelpAPIModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 43A314841CD28230000BB287 /* YelpAPIModel.m */; };
 		43A314881CD28F20000BB287 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43A314861CD28F20000BB287 /* LaunchScreen.storyboard */; };
+		43A3148B1CD293E2000BB287 /* RestaurantViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43A3148A1CD293E2000BB287 /* RestaurantViewController.m */; };
 		568FAAE81CCEB0EF005B2B8D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 568FAAE71CCEB0EF005B2B8D /* main.m */; };
 		568FAAEB1CCEB0EF005B2B8D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 568FAAEA1CCEB0EF005B2B8D /* AppDelegate.m */; };
 		568FAAF11CCEB0EF005B2B8D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 568FAAEF1CCEB0EF005B2B8D /* Main.storyboard */; };
@@ -50,6 +51,8 @@
 		43A314831CD28230000BB287 /* YelpAPIModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YelpAPIModel.h; sourceTree = "<group>"; };
 		43A314841CD28230000BB287 /* YelpAPIModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YelpAPIModel.m; sourceTree = "<group>"; };
 		43A314871CD28F20000BB287 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		43A314891CD293E2000BB287 /* RestaurantViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RestaurantViewController.h; sourceTree = "<group>"; };
+		43A3148A1CD293E2000BB287 /* RestaurantViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RestaurantViewController.m; sourceTree = "<group>"; };
 		568FAAE31CCEB0EF005B2B8D /* iMunch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iMunch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		568FAAE71CCEB0EF005B2B8D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		568FAAE91CCEB0EF005B2B8D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -133,6 +136,8 @@
 			children = (
 				43A3147D1CD28183000BB287 /* HomeTableViewController.h */,
 				43A3147E1CD28183000BB287 /* HomeTableViewController.m */,
+				43A314891CD293E2000BB287 /* RestaurantViewController.h */,
+				43A3148A1CD293E2000BB287 /* RestaurantViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -391,6 +396,7 @@
 				43A3147F1CD28183000BB287 /* HomeTableViewController.m in Sources */,
 				568FAAEB1CCEB0EF005B2B8D /* AppDelegate.m in Sources */,
 				43A3147C1CD2049F000BB287 /* NSURLRequest+OAuth.m in Sources */,
+				43A3148B1CD293E2000BB287 /* RestaurantViewController.m in Sources */,
 				568FAAE81CCEB0EF005B2B8D /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
