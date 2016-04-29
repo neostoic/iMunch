@@ -9,12 +9,16 @@
 #import "YelpAPIModel.h"
 #import "YelpAPISearch.h"
 
+// Filename for data - favorites plist
+static NSString *const kFavoritesPList = @"kFavoritesPList";
+
 // class extension
 @interface YelpAPIModel ()
 
 // private properties
 @property (strong, nonatomic) NSArray* businessArray;
 @property (strong, nonatomic) NSMutableArray* favoritesArray;
+@property (strong, nonatomic) NSString* filepath;
 
 @end
 
@@ -28,6 +32,22 @@
         _sharedModel = [[self alloc] init];
     });
     return _sharedModel;
+}
+- (void) save {
+    [self.favoritesArray writeToFile: self.filepath atomically:YES];
+}- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+        NSString *documentsDirectory = [paths objectAtIndex:0];
+        _filepath = [documentsDirectory stringByAppendingPathComponent:kFavoritesPList];
+        _favoritesArray = [NSMutableArray arrayWithContentsOfFile:_filepath];
+        if (!_favoritesArray) {
+            _favoritesArray = [[NSMutableArray alloc]init];
+        }
+    }
+    return self;
 }
 -(NSUInteger) numberOfRestaurants {
     NSString *defaultTerm = @"restaurants";
@@ -54,7 +74,6 @@
     dispatch_group_wait(requestGroup, DISPATCH_TIME_FOREVER); // This avoids the program exiting before all our asynchronous callbacks have been made.
     
     _businessArray = [APISample getAllBusiness];
-    _favoritesArray = [[NSMutableArray alloc]init];
     return [self.businessArray count];
 }
 - (NSDictionary *) restaurantAtIndex:(NSUInteger)index {
@@ -62,11 +81,13 @@
 }
 - (void) insertFavorite:(NSDictionary *)restaurant {
     [self.favoritesArray addObject:restaurant];
+    [self save];
 }
 - (void) removeFavoriteAtIndex:(NSUInteger)index {
     if (index < self.numberOfFavorites) {
          [self.favoritesArray removeObjectAtIndex:index];
     }
+    [self save];
    
 }
 - (NSUInteger) numberOfFavorites {

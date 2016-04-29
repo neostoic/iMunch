@@ -52,6 +52,12 @@
     
     self.model = [YelpAPIModel sharedModel];
     
+    // Output document persistence folder
+//#if TARGET_IPHONE_SIMULATOR
+//    NSLog(@"Documents Directory: %@", [[[NSFileManager defaultManager]
+//                                        URLsForDirectory:NSDocumentDirectory
+//                                        inDomains: NSUserDomainMask] lastObject]);
+//#endif
 }
 
 
