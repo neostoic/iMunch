@@ -16,25 +16,24 @@
 
 @implementation RestaurantViewController
 - (IBAction)goBack:(id)sender {
+    // Back button
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-//    for(NSString *key in [_restaurantCurrent allKeys]) {
-//        NSLog(@"%@",[_restaurantCurrent objectForKey:key]);
-//    }
+
+    // Parse through location and get address string
+    NSDictionary* location = [_restaurantCurrent objectForKey:@"location"];
+    NSArray* display_address = [location objectForKey:kLocationKey];
+    NSString* address = [[display_address valueForKey:@"description"] componentsJoinedByString:@" "];
+    _restaurantAddress.text = address;
     
-  //  NSLog(@"%@", [_restaurantCurrent objectForKey:kNameKey]);
-    UIBarButtonItem *backButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Previous" style:UIBarButtonItemStylePlain target:nil action:nil];
-    self.navigationItem.backBarButtonItem = backButtonItem;
-    
-    
+    // Set the rest from keys
    _restaurantTitle.text = [_restaurantCurrent objectForKey:kNameKey];
-   _restaurantRating.text = [[_restaurantCurrent objectForKey:kRatingKey] stringValue];
-   // _restaurantAddress.text = [_restaurantCurrent objectForKey:kLocationKey];
-//    //_restaurantAddress.text = address;
+    NSString* rating = [[_restaurantCurrent objectForKey:kRatingKey] stringValue];
+    _restaurantRating.text = [_restaurantRating.text stringByAppendingString:rating];
     _restaurantReview.text = [_restaurantCurrent objectForKey:kReviewKey];
     
 }
