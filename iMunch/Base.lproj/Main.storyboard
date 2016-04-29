@@ -152,6 +152,11 @@
                                                 <action selector="goBack:" destination="5ho-au-jS4" id="he3-Hn-JnE"/>
                                             </connections>
                                         </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Favorite" id="8O4-6a-cHn">
+                                            <connections>
+                                                <action selector="addFavorite:" destination="5ho-au-jS4" id="uVS-PF-XwL"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -255,6 +260,38 @@
             </objects>
             <point key="canvasLocation" x="868" y="-1658"/>
         </scene>
+        <!--Favorites Table-->
+        <scene sceneID="8Hr-dV-dY6">
+            <objects>
+                <tableViewController title="Favorites Table" id="bPD-u4-Hqg" customClass="FavoritesTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="jDY-D5-hfS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FavoriteCell" id="RLW-ye-9rj">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="RLW-ye-9rj" id="XaL-mR-CMm">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="bPD-u4-Hqg" id="RJb-0K-eec"/>
+                            <outlet property="delegate" destination="bPD-u4-Hqg" id="BMs-01-fBw"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="tOx-aw-Rsc"/>
+                    <connections>
+                        <segue destination="5ho-au-jS4" kind="presentation" identifier="restaurant1Segue" id="Ecf-uD-cU9"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1N7-v9-Phd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="868" y="-946"/>
+        </scene>
         <!--iMunch Tab-->
         <scene sceneID="tAG-aK-NGz">
             <objects>
@@ -266,14 +303,37 @@
                     </tabBar>
                     <connections>
                         <segue destination="rK5-fZ-k8V" kind="relationship" relationship="viewControllers" id="UCN-xr-JrG"/>
+                        <segue destination="NPo-eX-Eg0" kind="relationship" relationship="viewControllers" id="h0w-CF-Fcf"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kNv-f8-qpc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="56" y="-1658"/>
+            <point key="canvasLocation" x="80" y="-1658"/>
+        </scene>
+        <!--Favorites Navigation-->
+        <scene sceneID="gJr-w0-Kpy">
+            <objects>
+                <navigationController title="Favorites Navigation" automaticallyAdjustsScrollViewInsets="NO" id="NPo-eX-Eg0" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" systemItem="favorites" id="1Kd-BU-jmS"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="mwG-EI-TQJ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="bPD-u4-Hqg" kind="relationship" relationship="rootViewController" id="6DV-0S-ON2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="F1P-Eu-FQd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="56" y="-946"/>
         </scene>
     </scenes>
     <resources>
         <image name="home-7" width="30" height="30"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Ecf-uD-cU9"/>
+    </inferredMetricsTieBreakers>
 </document>

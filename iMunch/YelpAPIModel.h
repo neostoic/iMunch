@@ -20,7 +20,11 @@ static NSString * const kRatingKey = @"rating";
 
 + (instancetype) sharedModel;
 - (NSUInteger) numberOfRestaurants;
-- (NSDictionary *) restaurantAtIndex: (NSUInteger) index;
+- (NSDictionary*) restaurantAtIndex: (NSUInteger) index;
+- (void) insertFavorite: (NSDictionary*) restaurant;
+- (void) removeFavoriteAtIndex: (NSUInteger) index;
+- (NSDictionary*) favoriteAtIndex: (NSUInteger) index;
+- (NSUInteger) numberOfFavorites;
 
 
 

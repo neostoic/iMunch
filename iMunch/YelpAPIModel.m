@@ -14,6 +14,7 @@
 
 // private properties
 @property (strong, nonatomic) NSArray* businessArray;
+@property (strong, nonatomic) NSMutableArray* favoritesArray;
 
 @end
 
@@ -21,7 +22,6 @@
 
 + (instancetype) sharedModel {
     static YelpAPIModel *_sharedModel = nil;
-    
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         // code to be executed once - thread safe version
@@ -54,12 +54,27 @@
     dispatch_group_wait(requestGroup, DISPATCH_TIME_FOREVER); // This avoids the program exiting before all our asynchronous callbacks have been made.
     
     _businessArray = [APISample getAllBusiness];
+    _favoritesArray = [[NSMutableArray alloc]init];
     return [self.businessArray count];
 }
 - (NSDictionary *) restaurantAtIndex:(NSUInteger)index {
     return [self.businessArray objectAtIndex:index];
 }
-
+- (void) insertFavorite:(NSDictionary *)restaurant {
+    [self.favoritesArray addObject:restaurant];
+}
+- (void) removeFavoriteAtIndex:(NSUInteger)index {
+    if (index < self.numberOfFavorites) {
+         [self.favoritesArray removeObjectAtIndex:index];
+    }
+   
+}
+- (NSUInteger) numberOfFavorites {
+    return [self.favoritesArray count];
+}
+- (NSDictionary *) favoriteAtIndex:(NSUInteger)index {
+    return self.favoritesArray[index];
+}
 
 
 
