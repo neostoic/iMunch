@@ -25,7 +25,8 @@ static NSString * const kRatingKey = @"rating";
 - (void) removeFavoriteAtIndex: (NSUInteger) index;
 - (NSDictionary*) favoriteAtIndex: (NSUInteger) index;
 - (NSUInteger) numberOfFavorites;
-
+- (NSMutableArray*) searchResults: (NSString*) term location:(NSString *)location;
+- (NSMutableArray*) allRestaurants;
 
 
 @end

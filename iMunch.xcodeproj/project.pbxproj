@@ -14,6 +14,8 @@
 		43A314881CD28F20000BB287 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43A314861CD28F20000BB287 /* LaunchScreen.storyboard */; };
 		43A3148B1CD293E2000BB287 /* RestaurantViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43A3148A1CD293E2000BB287 /* RestaurantViewController.m */; };
 		43A3148F1CD2E000000BB287 /* FavoritesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43A3148E1CD2E000000BB287 /* FavoritesTableViewController.m */; };
+		43A314981CD34B8D000BB287 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43A314971CD34B8D000BB287 /* SearchViewController.m */; };
+		43A3149B1CD404D7000BB287 /* SearchTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43A3149A1CD404D7000BB287 /* SearchTableViewController.m */; };
 		568FAAE81CCEB0EF005B2B8D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 568FAAE71CCEB0EF005B2B8D /* main.m */; };
 		568FAAEB1CCEB0EF005B2B8D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 568FAAEA1CCEB0EF005B2B8D /* AppDelegate.m */; };
 		568FAAF11CCEB0EF005B2B8D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 568FAAEF1CCEB0EF005B2B8D /* Main.storyboard */; };
@@ -56,6 +58,10 @@
 		43A3148A1CD293E2000BB287 /* RestaurantViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RestaurantViewController.m; sourceTree = "<group>"; };
 		43A3148D1CD2E000000BB287 /* FavoritesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoritesTableViewController.h; sourceTree = "<group>"; };
 		43A3148E1CD2E000000BB287 /* FavoritesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoritesTableViewController.m; sourceTree = "<group>"; };
+		43A314961CD34B8D000BB287 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
+		43A314971CD34B8D000BB287 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
+		43A314991CD404D7000BB287 /* SearchTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchTableViewController.h; sourceTree = "<group>"; };
+		43A3149A1CD404D7000BB287 /* SearchTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchTableViewController.m; sourceTree = "<group>"; };
 		568FAAE31CCEB0EF005B2B8D /* iMunch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iMunch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		568FAAE71CCEB0EF005B2B8D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		568FAAE91CCEB0EF005B2B8D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -143,6 +149,10 @@
 				43A3148A1CD293E2000BB287 /* RestaurantViewController.m */,
 				43A3148D1CD2E000000BB287 /* FavoritesTableViewController.h */,
 				43A3148E1CD2E000000BB287 /* FavoritesTableViewController.m */,
+				43A314961CD34B8D000BB287 /* SearchViewController.h */,
+				43A314971CD34B8D000BB287 /* SearchViewController.m */,
+				43A314991CD404D7000BB287 /* SearchTableViewController.h */,
+				43A3149A1CD404D7000BB287 /* SearchTableViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -407,7 +417,9 @@
 				43A314851CD28230000BB287 /* YelpAPIModel.m in Sources */,
 				43A3147B1CD1FF38000BB287 /* YelpAPISearch.m in Sources */,
 				43A3147F1CD28183000BB287 /* HomeTableViewController.m in Sources */,
+				43A3149B1CD404D7000BB287 /* SearchTableViewController.m in Sources */,
 				43A3148F1CD2E000000BB287 /* FavoritesTableViewController.m in Sources */,
+				43A314981CD34B8D000BB287 /* SearchViewController.m in Sources */,
 				568FAAEB1CCEB0EF005B2B8D /* AppDelegate.m in Sources */,
 				43A3147C1CD2049F000BB287 /* NSURLRequest+OAuth.m in Sources */,
 				43A3148B1CD293E2000BB287 /* RestaurantViewController.m in Sources */,

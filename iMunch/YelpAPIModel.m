@@ -18,6 +18,7 @@ static NSString *const kFavoritesPList = @"kFavoritesPList";
 // private properties
 @property (strong, nonatomic) NSArray* businessArray;
 @property (strong, nonatomic) NSMutableArray* favoritesArray;
+@property (strong, nonatomic) NSMutableArray* resultsArray;
 @property (strong, nonatomic) NSString* filepath;
 
 @end
@@ -49,10 +50,34 @@ static NSString *const kFavoritesPList = @"kFavoritesPList";
     }
     return self;
 }
+- (NSMutableArray*) searchResults:(NSString *)term location:(NSString *)location {
+    YelpAPISearch *APISample = [[YelpAPISearch alloc] init];
+    
+    dispatch_group_t requestGroup = dispatch_group_create();
+    
+    dispatch_group_enter(requestGroup);
+    [APISample queryTopBusinessInfoForTerm:term location:location completionHandler:^(NSDictionary *topBusinessJSON, NSError *error) {
+        
+        if (error) {
+            NSLog(@"An error happened during the request: %@", error);
+        } else if (topBusinessJSON) {
+        } else {
+            NSLog(@"No business was found");
+        }
+        
+        dispatch_group_leave(requestGroup);
+    }];
+    
+    dispatch_group_wait(requestGroup, DISPATCH_TIME_FOREVER); // This avoids the program exiting before all our asynchronous callbacks have been made.
+    
+    NSArray* searchResults = [APISample getAllBusiness];
+    NSMutableArray *toReturn = [NSMutableArray arrayWithArray:searchResults];
+    _resultsArray = toReturn;
+    return toReturn;
+}
 -(NSUInteger) numberOfRestaurants {
     NSString *defaultTerm = @"restaurants";
     NSString *defaultLocation = @"90007";
-    // __block NSDictionary *restaurant;
     YelpAPISearch *APISample = [[YelpAPISearch alloc] init];
     
     dispatch_group_t requestGroup = dispatch_group_create();
@@ -75,6 +100,34 @@ static NSString *const kFavoritesPList = @"kFavoritesPList";
     
     _businessArray = [APISample getAllBusiness];
     return [self.businessArray count];
+}
+-(NSMutableArray* ) allRestaurants {
+    NSString *defaultTerm = @"restaurants";
+    NSString *defaultLocation = @"90007";
+    YelpAPISearch *APISample = [[YelpAPISearch alloc] init];
+    
+    dispatch_group_t requestGroup = dispatch_group_create();
+    
+    dispatch_group_enter(requestGroup);
+    [APISample queryTopBusinessInfoForTerm:defaultTerm location:defaultLocation completionHandler:^(NSDictionary *topBusinessJSON, NSError *error) {
+        
+        if (error) {
+            NSLog(@"An error happened during the request: %@", error);
+        } else if (topBusinessJSON) {
+            //  restaurant = topBusinessJSON;
+        } else {
+            NSLog(@"No business was found");
+        }
+        
+        dispatch_group_leave(requestGroup);
+    }];
+    
+    dispatch_group_wait(requestGroup, DISPATCH_TIME_FOREVER); // This avoids the program exiting before all our asynchronous callbacks have been made.
+    
+    _businessArray = [APISample getAllBusiness];
+    NSArray* searchResults = [APISample getAllBusiness];
+    NSMutableArray *toReturn = [NSMutableArray arrayWithArray:searchResults];
+    return toReturn;
 }
 - (NSDictionary *) restaurantAtIndex:(NSUInteger)index {
     return [self.businessArray objectAtIndex:index];
