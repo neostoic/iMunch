@@ -18,7 +18,9 @@
 
 @property(strong, nonatomic) YelpAPIModel *model;
 @property(strong, nonatomic) NSDictionary *currentRestaurant;
+@property(strong, nonatomic) NSString* currentAddress;
 @end
+
 
 @implementation HomeTableViewController
 
@@ -33,7 +35,67 @@
     
     self.model = [YelpAPIModel sharedModel];
     
+    _startBusinesses = [[NSMutableArray alloc]init];
+    INTULocationManager *locMgr = [INTULocationManager sharedInstance];
+    [locMgr requestLocationWithDesiredAccuracy:INTULocationAccuracyCity
+                                       timeout:10.0
+                          delayUntilAuthorized:YES  // This parameter is optional, defaults to NO if omitted
+                                         block:^(CLLocation *currentLocation, INTULocationAccuracy achievedAccuracy, INTULocationStatus status) {
+                                             if (status == INTULocationStatusSuccess) {
+                                                 // Request succeeded, meaning achievedAccuracy is at least the requested accuracy, and
+                                                 // currentLocation contains the device's current location.
+                                                 ////NSLog(@"%f", currentLocation.coordinate.latitude);
+                                                 
+                                                 CLGeocoder *geocoder = [[CLGeocoder alloc] init] ;
+                                                 [geocoder reverseGeocodeLocation:currentLocation completionHandler:^(NSArray *placemarks, NSError *error)
+                                                  {
+                                                      if (!(error))
+                                                      {
+                                                          CLPlacemark *placemark = [placemarks objectAtIndex:0];
+                                                          NSString *locatedAt = [[placemark.addressDictionary valueForKey:@"FormattedAddressLines"] componentsJoinedByString:@", "];
+                                                          NSString *Address = [[NSString alloc]initWithString:locatedAt];
+                                                          [self.startBusinesses addObjectsFromArray:[self.model searchResults:@"restaurants" location:Address]];
+                                                          
+                                                          dispatch_async(dispatch_get_main_queue(), ^ {
+                                                              [self.tableView reloadData];
+                                                          });
+                                                      }
+                                                      
+                                                      else
+                                                      {
+                                                          //NSLog(@"Geocode failed with error %@", error);
+                                                          //NSLog(@"\nCurrent Location Not Detected\n");
+                                                      }
+                                                  }];
+                                                
+                                                 
+                                             }
+                                             else if (status == INTULocationStatusTimedOut) {
+                                                 // Wasn't able to locate the user with the requested accuracy within the timeout interval.
+                                                 // However, currentLocation contains the best location available (if any) as of right now,
+                                                 // and achievedAccuracy has info on the accuracy/recency of the location in currentLocation.
+                                                 //NSLog(@"FAIL");
+                                             }
+                                             else {
+                                                 // An error occurred, more info is available by looking at the specific status returned.
+                                                 //NSLog(@"SOMETHING ELSE");
+                                             }
+                                         }];
+    
+    ////NSLog(@"%@", self.currentAddress);
+
+    
 }
+- (void) storeString: (NSString*) string{
+    //NSLog(@"%@", string);
+    _currentAddress = [[NSString alloc]init];
+    self.currentAddress = string;
+}
+
+- (void) viewDidAppear:(BOOL)animated {
+    [self.tableView reloadData];
+}
+
 - (IBAction)loginButtonClicked:(id)sender {
     FBSDKLoginManager *login = [[FBSDKLoginManager alloc] init];
     [login
@@ -41,11 +103,11 @@
      fromViewController:self
      handler:^(FBSDKLoginManagerLoginResult *result, NSError *error) {
          if (error) {
-             NSLog(@"Process error");
+             //NSLog(@"Process error");
          } else if (result.isCancelled) {
-             NSLog(@"Cancelled");
+             //NSLog(@"Cancelled");
          } else {
-             NSLog(@"Logged in");
+             //NSLog(@"Logged in");
          }
      }];
 }
@@ -63,7 +125,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     //[self.model defaultRestaurant];
-    return [self.model numberOfRestaurants];
+    return [self.startBusinesses count];
 }
 
 
@@ -72,7 +134,7 @@
     
     // Configure the cell...
     
-    NSDictionary* restaurant = [self.model restaurantAtIndex:indexPath.row];
+    NSDictionary* restaurant = [self.startBusinesses objectAtIndex:indexPath.row];
     cell.textLabel.text = restaurant[kNameKey];
     
     return cell;
@@ -80,7 +142,7 @@
 
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     // get current cell
-    _currentRestaurant = [self.model restaurantAtIndex:indexPath.row];
+    _currentRestaurant = [self.startBusinesses objectAtIndex:indexPath.row];
     [self performSegueWithIdentifier:@"restaurantSegue" sender:self];
     
 }

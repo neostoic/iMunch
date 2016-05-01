@@ -60,7 +60,7 @@
     
     // Output document persistence folder
     //#if TARGET_IPHONE_SIMULATOR
-    //    NSLog(@"Documents Directory: %@", [[[NSFileManager defaultManager]
+    //    //NSLog(@"Documents Directory: %@", [[[NSFileManager defaultManager]
     //                                        URLsForDirectory:NSDocumentDirectory
     //                                        inDomains: NSUserDomainMask] lastObject]);
     //#endif
@@ -90,7 +90,7 @@
         // store in dictionary
         
         [[[FBSDKGraphRequest alloc] initWithGraphPath:@"/search" parameters:params2 HTTPMethod:@"GET"] startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection, id result, NSError *error) {
-            //NSLog(@"result %@",result);
+            ////NSLog(@"result %@",result);
             
             id newOne =  [result objectForKey: @"data"];
             
@@ -123,7 +123,7 @@
             NSString* path2 = [one objectForKey:@"id"];
             NSString* path3 = @"/photos";
             NSString* path = [NSString stringWithFormat:@"%@%@%@", path1, path2, path3];
-            //NSLog(@"%@", path);
+            ////NSLog(@"%@", path);
             
             NSMutableDictionary *params = [NSMutableDictionary dictionaryWithCapacity:1L];
             
@@ -138,7 +138,7 @@
                                                   NSError *error) {
                 // Handle the result
                 
-                //  NSLog(@"%@", result);
+                //  //NSLog(@"%@", result);
                 
                 id newOne =  [result objectForKey: @"data"];
                 NSArray *allImagesArray = newOne;
@@ -147,7 +147,7 @@
                 for (int i  = 0; i < [allImagesArray count]; i++) {
                     [allImages addObject:[allImagesArray[i] objectForKey:@"id"]];
                 }
-                NSLog(@"%lu", (unsigned long)[allImages count]);
+                //NSLog(@"%lu", (unsigned long)[allImages count]);
                 
                 if ([allImages count] == 0) {
                     self.imageButton.enabled = NO;

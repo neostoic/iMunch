@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>INTULocationManager.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>OMGHTTPURLRQ.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -22,12 +27,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>BD0BB0585AB47F23550718D3BE9FBC78</key>
+		<key>1764115AB350B7C7E260B84FBC5C713F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D2259A656351A5CE51FAC5A212C79ACC</key>
+		<key>69809E4740F09C77BD86AF4061E296F0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E07A1B93D0B5E99C6E979FACDA81D9B4</key>
 		<dict>
 			<key>primary</key>
 			<true/>

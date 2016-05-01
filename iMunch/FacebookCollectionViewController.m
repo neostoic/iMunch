@@ -63,7 +63,7 @@ static NSString * const reuseIdentifier = @"FacebookCell";
 
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    //NSLog(@"%lu", (unsigned long)[self.images count]);
+    ////NSLog(@"%lu", (unsigned long)[self.images count]);
     return [self.images count];
 }
 

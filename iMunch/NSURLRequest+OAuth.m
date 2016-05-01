@@ -28,7 +28,7 @@ static NSString * const kTokenSecret       = @"UAr36fUNRCtK-SKPQVfAUuA4owk";
 
 + (NSURLRequest *)requestWithHost:(NSString *)host path:(NSString *)path params:(NSDictionary *)params {
   if ([kConsumerKey length] == 0 || [kConsumerSecret length] == 0 || [kToken length] == 0 || [kTokenSecret length] == 0) {
-    NSLog(@"WARNING: Please enter your api v2 credentials before attempting any API request. You can do so in NSURLRequest+OAuth.m");
+    //NSLog(@"WARNING: Please enter your api v2 credentials before attempting any API request. You can do so in NSURLRequest+OAuth.m");
   }
 
   return [TDOAuth URLRequestForPath:path
