@@ -2,7 +2,7 @@
 //  FacebookCollectionViewCell.m
 //  iMunch
 //
-//  Created by Vishnu Venkateswaran on 4/30/16.
+//  Created by Ananth Venkateswaran on 4/30/16.
 //  Copyright © 2016 Ananth Venkateswaran. All rights reserved.
 //
 
@@ -31,7 +31,6 @@
         NSString* imageURL = [result objectForKey:@"picture"];
         self.imageVIew.image= [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL   URLWithString:imageURL]]];
         
-        //NSLog(@"%@", [result class]);
         
     }];
     

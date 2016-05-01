@@ -2,7 +2,7 @@
 //  YelpAPIModel.m
 //  iMunch
 //
-//  Created by Vishnu Venkateswaran on 4/28/16.
+//  Created by Ananth Venkateswaran on 4/28/16.
 //  Copyright © 2016 Ananth Venkateswaran. All rights reserved.
 //
 
@@ -138,10 +138,10 @@ static NSString *const kFavoritesPList = @"kFavoritesPList";
 }
 - (void) removeFavoriteAtIndex:(NSUInteger)index {
     if (index < self.numberOfFavorites) {
-         [self.favoritesArray removeObjectAtIndex:index];
+        [self.favoritesArray removeObjectAtIndex:index];
     }
     [self save];
-   
+    
 }
 - (NSUInteger) numberOfFavorites {
     return [self.favoritesArray count];

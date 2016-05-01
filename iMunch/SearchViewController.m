@@ -2,7 +2,7 @@
 //  SearchViewController.m
 //  iMunch
 //
-//  Created by Vishnu Venkateswaran on 4/29/16.
+//  Created by Ananth Venkateswaran on 4/29/16.
 //  Copyright © 2016 Ananth Venkateswaran. All rights reserved.
 //
 
@@ -70,7 +70,7 @@
     
     if ([segue.identifier  isEqual: @"searchSegue"]) {
         UINavigationController *navController = (UINavigationController*)[segue destinationViewController];
-       SearchTableViewController *searchController = (SearchTableViewController*)[navController topViewController];
+        SearchTableViewController *searchController = (SearchTableViewController*)[navController topViewController];
         searchController.results = [self searchResults];
     }
 }

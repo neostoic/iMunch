@@ -16,6 +16,9 @@
 		4337FB411CD5A7D6001C1F98 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4337FB3E1CD5A7C9001C1F98 /* FBSDKLoginKit.framework */; };
 		4337FB441CD5A96C001C1F98 /* FacebookCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4337FB431CD5A96C001C1F98 /* FacebookCollectionViewController.m */; };
 		4337FB471CD5A97C001C1F98 /* FacebookCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4337FB461CD5A97C001C1F98 /* FacebookCollectionViewCell.m */; };
+		43A242881CD6B293005C6F7B /* libPods-iMunch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B8A96115E67AFB5D32F962A /* libPods-iMunch.a */; };
+		43A242891CD6B296005C6F7B /* libPods-iMunch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B8A96115E67AFB5D32F962A /* libPods-iMunch.a */; };
+		43A2428B1CD6B300005C6F7B /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43A2428A1CD6B300005C6F7B /* Bolts.framework */; };
 		43A3147B1CD1FF38000BB287 /* YelpAPISearch.m in Sources */ = {isa = PBXBuildFile; fileRef = 43A314791CD1FF38000BB287 /* YelpAPISearch.m */; };
 		43A3147C1CD2049F000BB287 /* NSURLRequest+OAuth.m in Sources */ = {isa = PBXBuildFile; fileRef = 43A314761CD1FF38000BB287 /* NSURLRequest+OAuth.m */; };
 		43A3147F1CD28183000BB287 /* HomeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43A3147E1CD28183000BB287 /* HomeTableViewController.m */; };
@@ -60,6 +63,7 @@
 		4337FB431CD5A96C001C1F98 /* FacebookCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FacebookCollectionViewController.m; sourceTree = "<group>"; };
 		4337FB451CD5A97C001C1F98 /* FacebookCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FacebookCollectionViewCell.h; sourceTree = "<group>"; };
 		4337FB461CD5A97C001C1F98 /* FacebookCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FacebookCollectionViewCell.m; sourceTree = "<group>"; };
+		43A2428A1CD6B300005C6F7B /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = "../../Documents/FacebookSDKs-iOS-20160412/Bolts.framework"; sourceTree = "<group>"; };
 		43A314751CD1FF38000BB287 /* NSURLRequest+OAuth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURLRequest+OAuth.h"; sourceTree = "<group>"; };
 		43A314761CD1FF38000BB287 /* NSURLRequest+OAuth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURLRequest+OAuth.m"; sourceTree = "<group>"; };
 		43A314771CD1FF38000BB287 /* YelpAPISample-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "YelpAPISample-Prefix.pch"; sourceTree = "<group>"; };
@@ -100,9 +104,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43A2428B1CD6B300005C6F7B /* Bolts.framework in Frameworks */,
 				4337FB391CD59FF0001C1F98 /* FBSDKCoreKit.framework in Frameworks */,
-				BF9E5694C4FA4896173A0CE2 /* libPods-iMunch.a in Frameworks */,
 				4337FB3F1CD5A7C9001C1F98 /* FBSDKLoginKit.framework in Frameworks */,
+				BF9E5694C4FA4896173A0CE2 /* libPods-iMunch.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +117,7 @@
 			files = (
 				4337FB3C1CD5A74A001C1F98 /* FBSDKCoreKit.framework in Frameworks */,
 				4337FB401CD5A7D3001C1F98 /* FBSDKLoginKit.framework in Frameworks */,
+				43A242881CD6B293005C6F7B /* libPods-iMunch.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,6 +127,7 @@
 			files = (
 				4337FB3D1CD5A750001C1F98 /* FBSDKCoreKit.framework in Frameworks */,
 				4337FB411CD5A7D6001C1F98 /* FBSDKLoginKit.framework in Frameworks */,
+				43A242891CD6B296005C6F7B /* libPods-iMunch.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,6 +146,7 @@
 		1B4ED02B832760A9DA90C7D3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				43A2428A1CD6B300005C6F7B /* Bolts.framework */,
 				4337FB3E1CD5A7C9001C1F98 /* FBSDKLoginKit.framework */,
 				4337FB381CD59FF0001C1F98 /* FBSDKCoreKit.framework */,
 				2B8A96115E67AFB5D32F962A /* libPods-iMunch.a */,
@@ -228,6 +236,7 @@
 		43A3148C1CD2DFCA000BB287 /* Yelp API Support Files */ = {
 			isa = PBXGroup;
 			children = (
+				43A314771CD1FF38000BB287 /* YelpAPISample-Prefix.pch */,
 				43A314751CD1FF38000BB287 /* NSURLRequest+OAuth.h */,
 				43A314761CD1FF38000BB287 /* NSURLRequest+OAuth.m */,
 				43A314781CD1FF38000BB287 /* YelpAPISearch.h */,
@@ -278,7 +287,6 @@
 				568FAAF71CCEB0EF005B2B8D /* Info.plist */,
 				568FAAE91CCEB0EF005B2B8D /* AppDelegate.h */,
 				568FAAEA1CCEB0EF005B2B8D /* AppDelegate.m */,
-				43A314771CD1FF38000BB287 /* YelpAPISample-Prefix.pch */,
 				43A314861CD28F20000BB287 /* LaunchScreen.storyboard */,
 			);
 			name = "Supporting Files";
