@@ -14,6 +14,9 @@
 @interface RestaurantViewController ()
 // private properties
 @property(strong, nonatomic) YelpAPIModel* model;
+@property (weak, nonatomic) IBOutlet UILabel *numberCheckins;
+@property (weak, nonatomic) IBOutlet UILabel *talks;
+@property (weak, nonatomic) IBOutlet UIButton *imageButton;
 
 @end
 
@@ -63,6 +66,69 @@
 //                                        URLsForDirectory:NSDocumentDirectory
 //                                        inDomains: NSUserDomainMask] lastObject]);
 //#endif
+    
+    // FACEBOOK PARSING
+    if ([FBSDKAccessToken currentAccessToken]) {
+        
+        // grab coordinates from current restaurant
+        NSDictionary* location = [self.restaurantCurrent objectForKey:@"location"];
+        NSDictionary* coordinate = [location objectForKey:@"coordinate"];
+        NSString* longitude = [coordinate objectForKey:@"longitude"];
+        NSString * latitude = [coordinate objectForKey:@"latitude"];
+        NSArray *coordinates = [[NSArray alloc] initWithObjects:longitude, latitude, nil];
+        NSString *center = [coordinates componentsJoinedByString:@","];
+        
+        
+        // make an API request to search for the corresponding Facebook page
+        NSMutableDictionary *params2 = [NSMutableDictionary dictionaryWithCapacity:5L];
+        
+        [params2 setObject:center forKey:@"center"];
+        [params2 setObject:@"page" forKey:@"type"];
+        [params2 setObject:@"id, checkins, talking_about_count" forKey: @"fields"];
+        [params2 setObject:@"10" forKey:@"distance"];
+        [params2 setObject:[self.restaurantCurrent objectForKey:kNameKey] forKey:@"q"];
+        [params2 setObject:@"1" forKey:@"limit"];
+        
+        // store in dictionary
+        
+        [[[FBSDKGraphRequest alloc] initWithGraphPath:@"/search" parameters:params2 HTTPMethod:@"GET"] startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection, id result, NSError *error) {
+            //NSLog(@"result %@",result);
+            
+            id newOne =  [result objectForKey: @"data"];
+            
+            // Check if no FB page
+            if ([newOne count] == 0) {
+                self.imageButton.enabled = NO;
+                return;
+            }
+            
+            NSDictionary* one = newOne[0];
+            
+            // number of checkins
+            NSNumber *numberOfCheckins = [one objectForKey:@"checkins"];
+            
+            NSNumberFormatter *formatter = [NSNumberFormatter new];
+            [formatter setNumberStyle:NSNumberFormatterDecimalStyle]; // this line is important!
+            
+            NSString *checkinString = [formatter stringFromNumber:numberOfCheckins];
+            self.numberCheckins.text = checkinString;
+            
+            // Number of individuals talking about this place
+            NSNumber *talks = [one objectForKey:@"talking_about_count"];
+            NSString *talkString =  [formatter stringFromNumber:talks];
+            self.talks.text = talkString;
+            
+        }];
+        
+        
+    }
+    
+         
+    
+    
+    
+    
+    
 }
 
 
@@ -96,7 +162,7 @@
             
             [params2 setObject:center forKey:@"center"];
             [params2 setObject:@"page" forKey:@"type"];
-            [params2 setObject:@"id" forKey: @"fields"];
+            [params2 setObject:@"id, checkins" forKey: @"fields"];
             [params2 setObject:@"10" forKey:@"distance"];
             [params2 setObject:[self.restaurantCurrent objectForKey:kNameKey] forKey:@"q"];
             [params2 setObject:@"1" forKey:@"limit"];
@@ -109,6 +175,7 @@
                 id newOne =  [result objectForKey: @"data"];
                 
                 NSDictionary* one = newOne[0];
+
                 
                 // Get images from that particular page using Page ID
                 NSString *path1 = @"/";
