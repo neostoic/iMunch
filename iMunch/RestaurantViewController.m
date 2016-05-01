@@ -26,9 +26,6 @@
     // Back button
     [self dismissViewControllerAnimated:YES completion:nil];
 }
-- (IBAction)goFacebook:(id)sender {
-    [self performSegueWithIdentifier:@"FacebookSegue" sender:self];
-}
 - (IBAction)addFavorite:(id)sender {
     [self.model insertFavorite:_restaurantCurrent];
     NSString* part1 = @"Congratulations! You just added ";

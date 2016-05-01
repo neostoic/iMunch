@@ -169,7 +169,6 @@
                                 </constraints>
                                 <state key="normal" title="View Images"/>
                                 <connections>
-                                    <action selector="goFacebook:" destination="5ho-au-jS4" eventType="touchUpInside" id="d72-QB-Bbk"/>
                                     <segue destination="MUe-1B-xNz" kind="presentation" identifier="FacebookSegue" id="gJp-20-FNE"/>
                                 </connections>
                             </button>
