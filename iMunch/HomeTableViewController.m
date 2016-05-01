@@ -9,6 +9,9 @@
 #import "HomeTableViewController.h"
 #import "YelpAPIModel.h"
 #import "RestaurantViewController.h"
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
+#import <FBSDKLoginKit/FBSDKLoginKit.h>
+
 
 @interface HomeTableViewController ()
 // private properties
@@ -30,6 +33,21 @@
     
     self.model = [YelpAPIModel sharedModel];
     
+}
+- (IBAction)loginButtonClicked:(id)sender {
+    FBSDKLoginManager *login = [[FBSDKLoginManager alloc] init];
+    [login
+     logInWithReadPermissions: @[@"public_profile"]
+     fromViewController:self
+     handler:^(FBSDKLoginManagerLoginResult *result, NSError *error) {
+         if (error) {
+             NSLog(@"Process error");
+         } else if (result.isCancelled) {
+             NSLog(@"Cancelled");
+         } else {
+             NSLog(@"Logged in");
+         }
+     }];
 }
 
 - (void)didReceiveMemoryWarning {
