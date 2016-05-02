@@ -54,6 +54,7 @@
                                                           CLPlacemark *placemark = [placemarks objectAtIndex:0];
                                                           NSString *locatedAt = [[placemark.addressDictionary valueForKey:@"FormattedAddressLines"] componentsJoinedByString:@", "];
                                                           NSString *Address = [[NSString alloc]initWithString:locatedAt];
+                                                          NSLog(@"%@", Address);
                                                           [self.startBusinesses addObjectsFromArray:[self.model searchResults:@"restaurants" location:Address]];
                                                           
                                                           dispatch_async(dispatch_get_main_queue(), ^ {
