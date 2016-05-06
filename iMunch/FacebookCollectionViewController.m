@@ -16,6 +16,11 @@
 
 @implementation FacebookCollectionViewController
 
+- (UIStatusBarStyle)preferredStatusBarStyle
+{
+    return UIStatusBarStyleLightContent;
+}
+
 static NSString * const reuseIdentifier = @"FacebookCell";
 - (IBAction)goBack:(id)sender {
     // Back button

@@ -11,7 +11,7 @@
 #import "FacebookCollectionViewController.h"
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 
-@interface RestaurantViewController ()
+@interface RestaurantViewController () <UINavigationBarDelegate>
 // private properties
 @property(strong, nonatomic) YelpAPIModel* model;
 @property (weak, nonatomic) IBOutlet UILabel *numberCheckins;
@@ -25,6 +25,10 @@
 - (IBAction)goBack:(id)sender {
     // Back button
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (UIBarPosition)positionForBar:(id<UIBarPositioning>)bar {
+    return UIBarPositionTopAttached;
 }
 - (IBAction)addFavorite:(id)sender {
     [self.model insertFavorite:_restaurantCurrent];
@@ -43,6 +47,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    _navigationBar.delegate = self;
     
     // Parse through location and get address string
     NSDictionary* location = [_restaurantCurrent objectForKey:@"location"];

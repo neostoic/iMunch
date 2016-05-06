@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		431CEC1A1CDC192A002CC749 /* FacebookSDKs-iOS-20160412 in Resources */ = {isa = PBXBuildFile; fileRef = 431CEC191CDC192A002CC749 /* FacebookSDKs-iOS-20160412 */; };
+		431CEC1E1CDC1BF4002CC749 /* Location.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 431CEC1D1CDC1BF4002CC749 /* Location.gpx */; };
 		4337FB3B1CD5A367001C1F98 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4337FB3A1CD5A367001C1F98 /* Default-568h@2x.png */; };
 		4337FB441CD5A96C001C1F98 /* FacebookCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4337FB431CD5A96C001C1F98 /* FacebookCollectionViewController.m */; };
 		4337FB471CD5A97C001C1F98 /* FacebookCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4337FB461CD5A97C001C1F98 /* FacebookCollectionViewCell.m */; };
@@ -54,6 +55,7 @@
 /* Begin PBXFileReference section */
 		2B8A96115E67AFB5D32F962A /* libPods-iMunch.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iMunch.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		431CEC191CDC192A002CC749 /* FacebookSDKs-iOS-20160412 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "FacebookSDKs-iOS-20160412"; sourceTree = "<group>"; };
+		431CEC1D1CDC1BF4002CC749 /* Location.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Location.gpx; sourceTree = "<group>"; };
 		4337FB3A1CD5A367001C1F98 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		4337FB421CD5A96C001C1F98 /* FacebookCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FacebookCollectionViewController.h; sourceTree = "<group>"; };
 		4337FB431CD5A96C001C1F98 /* FacebookCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FacebookCollectionViewController.m; sourceTree = "<group>"; };
@@ -278,6 +280,7 @@
 		568FAAE61CCEB0EF005B2B8D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				431CEC1D1CDC1BF4002CC749 /* Location.gpx */,
 				568FAAE71CCEB0EF005B2B8D /* main.m */,
 				568FAAF71CCEB0EF005B2B8D /* Info.plist */,
 				568FAAE91CCEB0EF005B2B8D /* AppDelegate.h */,
@@ -415,6 +418,7 @@
 				43A314881CD28F20000BB287 /* LaunchScreen.storyboard in Resources */,
 				4337FB3B1CD5A367001C1F98 /* Default-568h@2x.png in Resources */,
 				568FAAF31CCEB0EF005B2B8D /* Assets.xcassets in Resources */,
+				431CEC1E1CDC1BF4002CC749 /* Location.gpx in Resources */,
 				568FAAF11CCEB0EF005B2B8D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
