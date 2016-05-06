@@ -28,9 +28,12 @@
 }
 
 - (UIBarPosition)positionForBar:(id<UIBarPositioning>)bar {
+    // UI positioning
     return UIBarPositionTopAttached;
 }
 - (IBAction)addFavorite:(id)sender {
+    // Concatenate strings and add an alert message below
+    
     [self.model insertFavorite:_restaurantCurrent];
     NSString* part1 = @"Congratulations! You just added ";
     NSString* part2 = [_restaurantCurrent objectForKey:kNameKey];
@@ -40,6 +43,8 @@
     
     UIAlertAction* ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
     [alertController addAction:ok];
+    
+    // Present the alert
     
     [self presentViewController:alertController animated:YES completion:nil];
 }
@@ -63,12 +68,6 @@
     
     self.model = [YelpAPIModel sharedModel];
     
-    // Output document persistence folder
-    //#if TARGET_IPHONE_SIMULATOR
-    //    //NSLog(@"Documents Directory: %@", [[[NSFileManager defaultManager]
-    //                                        URLsForDirectory:NSDocumentDirectory
-    //                                        inDomains: NSUserDomainMask] lastObject]);
-    //#endif
     
     // FACEBOOK PARSING
     if ([FBSDKAccessToken currentAccessToken]) {
@@ -141,9 +140,8 @@
             [request startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection,
                                                   id result,
                                                   NSError *error) {
-                // Handle the result
+                // Grab the image IDs from the API call
                 
-                //  //NSLog(@"%@", result);
                 
                 id newOne =  [result objectForKey: @"data"];
                 NSArray *allImagesArray = newOne;
@@ -152,7 +150,6 @@
                 for (int i  = 0; i < [allImagesArray count]; i++) {
                     [allImages addObject:[allImagesArray[i] objectForKey:@"id"]];
                 }
-                //NSLog(@"%lu", (unsigned long)[allImages count]);
                 
                 if ([allImages count] == 0) {
                     self.imageButton.enabled = NO;
@@ -190,6 +187,9 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    
+    
+    // Grab the destination controller and make sure it has all the necessary image IDs
     
     UINavigationController *navController = (UINavigationController*)[segue destinationViewController];
     FacebookCollectionViewController *facebookController = (FacebookCollectionViewController*)[navController topViewController];

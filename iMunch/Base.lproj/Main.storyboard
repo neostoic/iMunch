@@ -385,7 +385,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jO7-5l-b6B" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1680" y="-2352"/>
+            <point key="canvasLocation" x="2492" y="-2352"/>
         </scene>
         <!--Home Tab-->
         <scene sceneID="EMz-ro-gqO">
@@ -443,7 +443,7 @@
             </objects>
             <point key="canvasLocation" x="868" y="-946"/>
         </scene>
-        <!--Search View Controller-->
+        <!--Search-->
         <scene sceneID="5Gp-8f-XSJ">
             <objects>
                 <viewController id="iLW-K3-wf5" customClass="SearchViewController" sceneMemberID="viewController">
@@ -457,18 +457,18 @@
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5cU-Uy-dmt">
                                 <rect key="frame" x="120" y="82" width="360" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qQG-BP-8Ed">
                                 <rect key="frame" x="120" y="120" width="360" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Term:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ysk-1a-ceV">
                                 <rect key="frame" x="39" y="86" width="61" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="61" id="WBU-27-umt"/>
+                                    <constraint firstAttribute="width" constant="61" id="bBy-ka-BW3"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="17"/>
                                 <nil key="highlightedColor"/>
@@ -479,7 +479,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BuP-Nt-A4s">
-                                <rect key="frame" x="509" y="72" width="79" height="34"/>
+                                <rect key="frame" x="501" y="73" width="79" height="34"/>
                                 <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="17"/>
                                 <state key="normal" title="Search">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -488,42 +488,29 @@
                                     <action selector="goToSearchTable:" destination="iLW-K3-wf5" eventType="touchUpInside" id="SVD-BS-wV6"/>
                                 </connections>
                             </button>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g4d-z3-26U">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
-                                <color key="barTintColor" red="0.74117647060000003" green="0.74509803919999995" blue="0.76078431369999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <textAttributes key="titleTextAttributes">
-                                    <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="20"/>
-                                </textAttributes>
-                                <items>
-                                    <navigationItem title="Search" id="2Ty-PQ-dVY"/>
-                                </items>
-                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="BuP-Nt-A4s" firstAttribute="top" secondItem="g4d-z3-26U" secondAttribute="bottom" constant="28" id="6Ng-i7-yi3"/>
-                            <constraint firstItem="BuP-Nt-A4s" firstAttribute="leading" secondItem="5cU-Uy-dmt" secondAttribute="trailing" constant="29" id="6Pw-SE-Rkm"/>
-                            <constraint firstItem="5cU-Uy-dmt" firstAttribute="baseline" secondItem="ysk-1a-ceV" secondAttribute="firstBaseline" id="6aL-0M-Pey"/>
-                            <constraint firstItem="5cU-Uy-dmt" firstAttribute="leading" secondItem="ysk-1a-ceV" secondAttribute="trailing" constant="20" id="9Ee-FF-RZU"/>
-                            <constraint firstItem="KqE-74-aH7" firstAttribute="top" secondItem="qQG-BP-8Ed" secondAttribute="bottom" constant="401" id="9Xv-CA-hyN"/>
-                            <constraint firstItem="qQG-BP-8Ed" firstAttribute="leading" secondItem="rAD-aB-eaI" secondAttribute="trailing" constant="1" id="Ao6-sh-bxr"/>
-                            <constraint firstItem="5cU-Uy-dmt" firstAttribute="trailing" secondItem="qQG-BP-8Ed" secondAttribute="trailing" id="BLd-An-Ugw"/>
-                            <constraint firstItem="5cU-Uy-dmt" firstAttribute="top" secondItem="g4d-z3-26U" secondAttribute="bottom" constant="38" id="BjJ-kX-UzG"/>
-                            <constraint firstItem="qQG-BP-8Ed" firstAttribute="top" secondItem="5cU-Uy-dmt" secondAttribute="bottom" constant="8" symbolic="YES" id="KQV-aO-CVz"/>
-                            <constraint firstItem="5cU-Uy-dmt" firstAttribute="leading" secondItem="qQG-BP-8Ed" secondAttribute="leading" id="MKh-L5-ZYH"/>
-                            <constraint firstAttribute="trailing" secondItem="g4d-z3-26U" secondAttribute="trailing" id="OsY-v7-RDF"/>
-                            <constraint firstItem="rAD-aB-eaI" firstAttribute="centerY" secondItem="qQG-BP-8Ed" secondAttribute="centerY" id="Rir-hK-gyp"/>
-                            <constraint firstItem="g4d-z3-26U" firstAttribute="centerX" secondItem="5cU-Uy-dmt" secondAttribute="centerX" id="XaO-Jl-jUn"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="BuP-Nt-A4s" secondAttribute="trailing" constant="-8" id="aRc-bR-AHo"/>
-                            <constraint firstItem="qQG-BP-8Ed" firstAttribute="baseline" secondItem="rAD-aB-eaI" secondAttribute="firstBaseline" id="gJc-MG-XRJ"/>
-                            <constraint firstItem="ysk-1a-ceV" firstAttribute="centerY" secondItem="5cU-Uy-dmt" secondAttribute="centerY" id="hmZ-O5-rXd"/>
-                            <constraint firstItem="ysk-1a-ceV" firstAttribute="leading" secondItem="rAD-aB-eaI" secondAttribute="leading" id="i17-aK-VVw"/>
-                            <constraint firstItem="KqE-74-aH7" firstAttribute="top" secondItem="BuP-Nt-A4s" secondAttribute="bottom" constant="445" id="kzE-I9-hx5"/>
-                            <constraint firstItem="g4d-z3-26U" firstAttribute="leading" secondItem="Yd1-2B-qQh" secondAttribute="leading" id="qN0-qk-Sbr"/>
-                            <constraint firstItem="ysk-1a-ceV" firstAttribute="leading" secondItem="Yd1-2B-qQh" secondAttribute="leadingMargin" constant="19" id="qX6-sd-0UC"/>
+                            <constraint firstItem="qQG-BP-8Ed" firstAttribute="baseline" secondItem="rAD-aB-eaI" secondAttribute="firstBaseline" id="20y-MK-97K"/>
+                            <constraint firstItem="BuP-Nt-A4s" firstAttribute="top" secondItem="76N-PU-M6o" secondAttribute="bottom" constant="9" id="447-kw-dKr"/>
+                            <constraint firstItem="BuP-Nt-A4s" firstAttribute="leading" secondItem="5cU-Uy-dmt" secondAttribute="trailing" constant="21" id="9Up-Eq-Z40"/>
+                            <constraint firstItem="qQG-BP-8Ed" firstAttribute="top" secondItem="5cU-Uy-dmt" secondAttribute="bottom" constant="8" symbolic="YES" id="Apg-jr-o4a"/>
+                            <constraint firstItem="qQG-BP-8Ed" firstAttribute="leading" secondItem="rAD-aB-eaI" secondAttribute="trailing" constant="1" id="EAV-Jw-Sns"/>
+                            <constraint firstItem="5cU-Uy-dmt" firstAttribute="leading" secondItem="ysk-1a-ceV" secondAttribute="trailing" constant="20" id="IFO-TL-2YV"/>
+                            <constraint firstItem="KqE-74-aH7" firstAttribute="top" secondItem="BuP-Nt-A4s" secondAttribute="bottom" constant="444" id="QkJ-BE-kNm"/>
+                            <constraint firstItem="5cU-Uy-dmt" firstAttribute="baseline" secondItem="ysk-1a-ceV" secondAttribute="firstBaseline" id="Qu1-zK-lzU"/>
+                            <constraint firstItem="rAD-aB-eaI" firstAttribute="centerY" secondItem="qQG-BP-8Ed" secondAttribute="centerY" id="S6D-Vl-D3R"/>
+                            <constraint firstItem="5cU-Uy-dmt" firstAttribute="trailing" secondItem="qQG-BP-8Ed" secondAttribute="trailing" id="TBO-9w-n6D"/>
+                            <constraint firstItem="ysk-1a-ceV" firstAttribute="leading" secondItem="rAD-aB-eaI" secondAttribute="leading" id="bJA-0W-Exs"/>
+                            <constraint firstItem="BuP-Nt-A4s" firstAttribute="trailing" secondItem="Yd1-2B-qQh" secondAttribute="trailingMargin" id="kyq-cJ-reW"/>
+                            <constraint firstItem="5cU-Uy-dmt" firstAttribute="leading" secondItem="qQG-BP-8Ed" secondAttribute="leading" id="mJc-bK-ZCC"/>
+                            <constraint firstItem="ysk-1a-ceV" firstAttribute="centerY" secondItem="5cU-Uy-dmt" secondAttribute="centerY" id="oPU-QV-Unr"/>
+                            <constraint firstItem="5cU-Uy-dmt" firstAttribute="top" secondItem="76N-PU-M6o" secondAttribute="bottom" constant="18" id="u9h-qU-Rm5"/>
+                            <constraint firstItem="ysk-1a-ceV" firstAttribute="leading" secondItem="Yd1-2B-qQh" secondAttribute="leadingMargin" constant="19" id="vbu-Wb-LHK"/>
+                            <constraint firstItem="5cU-Uy-dmt" firstAttribute="centerX" secondItem="Yd1-2B-qQh" secondAttribute="centerX" id="wLK-Co-Kcy"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="search" id="usV-56-6BQ"/>
+                    <navigationItem key="navigationItem" title="Search" id="QSR-aT-thR"/>
                     <connections>
                         <outlet property="firstTextField" destination="5cU-Uy-dmt" id="nM0-7F-Usi"/>
                         <outlet property="searchButton" destination="BuP-Nt-A4s" id="9Lw-aK-uRc"/>
@@ -533,7 +520,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7pC-g2-jBS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="80" y="-2352"/>
+            <point key="canvasLocation" x="892" y="-2352"/>
         </scene>
         <!--iMunch Tab-->
         <scene sceneID="tAG-aK-NGz">
@@ -550,15 +537,10 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </tabBar>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
-                            <color key="value" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                        </userDefinedRuntimeAttribute>
-                    </userDefinedRuntimeAttributes>
                     <connections>
                         <segue destination="rK5-fZ-k8V" kind="relationship" relationship="viewControllers" id="UCN-xr-JrG"/>
                         <segue destination="NPo-eX-Eg0" kind="relationship" relationship="viewControllers" id="h0w-CF-Fcf"/>
-                        <segue destination="iLW-K3-wf5" kind="relationship" relationship="viewControllers" id="Fnd-2Y-2tx"/>
+                        <segue destination="kkW-3J-l21" kind="relationship" relationship="viewControllers" id="Fnd-2Y-2tx"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kNv-f8-qpc" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -610,7 +592,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eMQ-nI-3cE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="868" y="-2352"/>
+            <point key="canvasLocation" x="1680" y="-2352"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="cGw-Jf-V3N">
@@ -635,12 +617,36 @@
             </objects>
             <point key="canvasLocation" x="3014" y="-1664"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="1qr-hz-4Rb">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kkW-3J-l21" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" systemItem="search" id="usV-56-6BQ"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="aCK-Ny-KkM">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.74117647060000003" green="0.74509803919999995" blue="0.76078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="20"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="iLW-K3-wf5" kind="relationship" relationship="rootViewController" id="nSX-3m-VEi"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NIq-hm-7B7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="80" y="-2352"/>
+        </scene>
     </scenes>
     <resources>
         <image name="home-7" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Ecf-uD-cU9"/>
+        <segue reference="oDu-BN-tlZ"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
 </document>

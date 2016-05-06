@@ -55,7 +55,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"SearchCell" forIndexPath:indexPath];
     
-    // Configure the cell...
+    // Get the search results from passed in array
     NSDictionary* searchResult = [self.results objectAtIndex:indexPath.row];
     cell.textLabel.text = searchResult[kNameKey];
     
@@ -63,7 +63,7 @@
 }
 
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    // get current cell
+    // get current cell and perform segue to next view controller
     _currentResult = [self.results objectAtIndex:indexPath.row];
     [self performSegueWithIdentifier:@"restaurant2segue" sender:self];
     
@@ -110,7 +110,9 @@
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    // Pass the selected object to the new view controller
+    
+    // Pass information from cell to the restaurant view controller
     
     if ([segue.identifier  isEqual: @"restaurant2segue"]) {
         RestaurantViewController *vcDestination = segue.destinationViewController;

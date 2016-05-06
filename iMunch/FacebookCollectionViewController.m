@@ -38,6 +38,8 @@ static NSString * const reuseIdentifier = @"FacebookCell";
     
     // Do any additional setup after loading the view.
     
+    // Set the name of the restaurant in the navigation bar
+    
     self.navigationItem.title = _name;
     
     
@@ -68,13 +70,14 @@ static NSString * const reuseIdentifier = @"FacebookCell";
 
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    ////NSLog(@"%lu", (unsigned long)[self.images count]);
     return [self.images count];
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     FacebookCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     // Configure the cell
+    
+    // Call setUpCell to add to the imageView
     [cell setUpCell: [self.images objectAtIndex:indexPath.row]];
     
     return cell;

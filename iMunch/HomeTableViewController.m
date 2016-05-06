@@ -41,6 +41,8 @@
     self.model = [YelpAPIModel sharedModel];
     
     _startBusinesses = [[NSMutableArray alloc]init];
+    
+    // Call the INTULocationManager callback method to find current location
     INTULocationManager *locMgr = [INTULocationManager sharedInstance];
     [locMgr requestLocationWithDesiredAccuracy:INTULocationAccuracyCity
                                        timeout:10.0
@@ -49,7 +51,9 @@
                                              if (status == INTULocationStatusSuccess) {
                                                  // Request succeeded, meaning achievedAccuracy is at least the requested accuracy, and
                                                  // currentLocation contains the device's current location.
-                                                 ////NSLog(@"%f", currentLocation.coordinate.latitude);
+                                                 
+                                                 // Reverse geocode lat and long to address
+                                                 
                                                  
                                                  CLGeocoder *geocoder = [[CLGeocoder alloc] init] ;
                                                  [geocoder reverseGeocodeLocation:currentLocation completionHandler:^(NSArray *placemarks, NSError *error)
@@ -59,7 +63,7 @@
                                                           CLPlacemark *placemark = [placemarks objectAtIndex:0];
                                                           NSString *locatedAt = [[placemark.addressDictionary valueForKey:@"FormattedAddressLines"] componentsJoinedByString:@", "];
                                                           NSString *Address = [[NSString alloc]initWithString:locatedAt];
-                                                          NSLog(@"%@", Address);
+                                                          // Add to businesses array
                                                           [self.startBusinesses addObjectsFromArray:[self.model searchResults:@"restaurants" location:Address]];
                                                           
                                                           dispatch_async(dispatch_get_main_queue(), ^ {
@@ -69,8 +73,7 @@
                                                       
                                                       else
                                                       {
-                                                          //NSLog(@"Geocode failed with error %@", error);
-                                                          //NSLog(@"\nCurrent Location Not Detected\n");
+                                                        
                                                       }
                                                   }];
                                                 
@@ -80,22 +83,16 @@
                                                  // Wasn't able to locate the user with the requested accuracy within the timeout interval.
                                                  // However, currentLocation contains the best location available (if any) as of right now,
                                                  // and achievedAccuracy has info on the accuracy/recency of the location in currentLocation.
-                                                 //NSLog(@"FAIL");
+                                                
                                              }
                                              else {
                                                  // An error occurred, more info is available by looking at the specific status returned.
-                                                 //NSLog(@"SOMETHING ELSE");
+                                                
                                              }
                                          }];
     
-    ////NSLog(@"%@", self.currentAddress);
 
     
-}
-- (void) storeString: (NSString*) string{
-    //NSLog(@"%@", string);
-    _currentAddress = [[NSString alloc]init];
-    self.currentAddress = string;
 }
 
 - (void) viewDidAppear:(BOOL)animated {
@@ -103,6 +100,7 @@
 }
 
 - (IBAction)loginButtonClicked:(id)sender {
+    // This will log the user in to Facebook
     FBSDKLoginManager *login = [[FBSDKLoginManager alloc] init];
     [login
      logInWithReadPermissions: @[@"public_profile"]
@@ -130,7 +128,6 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    //[self.model defaultRestaurant];
     return [self.startBusinesses count];
 }
 
@@ -140,6 +137,8 @@
     
     // Configure the cell...
     
+    // Grab restaurants from businesses array
+    
     NSDictionary* restaurant = [self.startBusinesses objectAtIndex:indexPath.row];
     cell.textLabel.text = restaurant[kNameKey];
     
@@ -147,7 +146,7 @@
 }
 
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    // get current cell
+    // get current cell and send information to restaurant view
     _currentRestaurant = [self.startBusinesses objectAtIndex:indexPath.row];
     [self performSegueWithIdentifier:@"restaurantSegue" sender:self];
     
@@ -193,13 +192,12 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    
+    // Send information to restaurant view
     if ([segue.identifier  isEqual: @"restaurantSegue"]) {
         RestaurantViewController *vcDestination = segue.destinationViewController;
         vcDestination.restaurantCurrent = [self currentRestaurant];
     }
-    
-    
-    
 }
 
 

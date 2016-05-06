@@ -29,6 +29,8 @@
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+    
+    // setting the delete button
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
     
     self.model = [YelpAPIModel sharedModel];
@@ -55,7 +57,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"FavoriteCell" forIndexPath:indexPath];
     
-    // Configure the cell...
+    // Get a favorite from the model
     NSDictionary* favorite = [self.model favoriteAtIndex:indexPath.row];
     cell.textLabel.text = favorite[kNameKey];
     
@@ -63,7 +65,7 @@
 }
 
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    // get current cell
+    // get current cell from restaurant at index and perform segue back to restaurant view
     _currentRestaurant = [self.model restaurantAtIndex:indexPath.row];
     [self performSegueWithIdentifier:@"restaurant1Segue" sender:self];
     
@@ -81,6 +83,8 @@
 // Override to support editing the table view.
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
+        
+        // delete from model
         [self.model removeFavoriteAtIndex:indexPath.row];
         
         // Delete the row from the data source
@@ -112,6 +116,8 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    
+    // Pass information to restaurant view
     
     if ([segue.identifier  isEqual: @"restaurant1Segue"]) {
         RestaurantViewController *vcDestination = segue.destinationViewController;

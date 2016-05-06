@@ -12,10 +12,12 @@
 @implementation FacebookCollectionViewCell
 
 - (void) setUpCell:(NSString *)imageID {
+    
+    // Using the ID sent in, make an API call to request for a particular image
     NSString* part1 = @"/";
     NSString* photoID = [NSString stringWithFormat:@"%@%@", part1, imageID];
     
-    NSMutableDictionary *params = [NSMutableDictionary dictionaryWithCapacity:5L];
+    NSMutableDictionary *params = [NSMutableDictionary dictionaryWithCapacity:1L];
     
     [params setObject:@"picture" forKey:@"fields"];
     
@@ -27,7 +29,7 @@
     [request startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection,
                                           id result,
                                           NSError *error) {
-        // Handle the result
+        // Set the image from URL to the imageView
         NSString* imageURL = [result objectForKey:@"picture"];
         self.imageVIew.image= [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL   URLWithString:imageURL]]];
         
